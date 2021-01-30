@@ -225,10 +225,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-01-29 22:45:43 / Modified: 22:52:22" itemprop="dateCreated datePublished" datetime="2021-01-29T22:45:43+08:00">2021-01-29</time>
+      <time title="Created: 2021-01-29 22:45:43" itemprop="dateCreated datePublished" datetime="2021-01-29T22:45:43+08:00">2021-01-29</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-30 10:32:09" itemprop="dateModified" datetime="2021-01-30T10:32:09+08:00">2021-01-30</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -249,7 +255,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>学不会的多项式，理不清的递推关系</p>
+          <p>永远学不会的多项式，永远理不清的递推关系</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/01/29/%E5%9B%BE%E7%9A%84%E8%AE%A1%E6%95%B0/">
@@ -488,7 +494,37 @@
 
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 
