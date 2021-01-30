@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta name="description" content="学不会的多项式，理不清的递推关系">
 <meta property="og:type" content="article">
@@ -259,7 +259,7 @@
 <h2 id="预备知识：Euler变换"><a href="#预备知识：Euler变换" class="headerlink" title="*预备知识：Euler变换"></a>*预备知识：Euler变换</h2><p>Euler变换在无标号计数中的组合意义相当于有标号计数中的exp，即阶数之和为$n$的结构的任意组合。</p>
 <p>设$F(x)=\sum_{i=0}^{\infty}f_ix^i$。<br>定义$\mathcal{E}(F(x))=\prod_{i=0}^\infty \frac{1}{(1-x^i)^{f_i}}$。<br>上式可化为$\mathcal{E}(F(x))=\exp(\sum_{i=1}^\infty\frac{F(x^i)}{i})$。</p>
 <h2 id="2、有根树"><a href="#2、有根树" class="headerlink" title="2、有根树"></a>2、有根树</h2><p>设OGF为$F(x)=\sum_{i=0}^\infty f_ix^i$。<br>任意一棵大小为$n(n\ge 1)$的有根树去掉根，可以得到若干棵大小之和为$n-1$的有根树。因此$F(x)=x\mathcal{E}(F(x))$。</p>
-<h2 id="2-、无根树"><a href="#2-、无根树" class="headerlink" title="2*、无根树"></a>2*、无根树</h2><p>设有根树的OGF为$F(x)=\sum_{i=0}^\infty f_ix^i$，无根树的OGF为$H(x)=\sum_{i=0}^\infty h_ix^i$。<br>要统计无根树，只需统计以重心为根的有根树。根据重心的定义一个点是重心当且仅当它的每棵子树大小不超过$[\frac{n}{2}]$。<br>因此，一棵树有2个重心当且仅当重心最大子树的大小<strong>恰好</strong>是$\frac{n}{2}$，否则只有1个重心。当树有两个重心时，也要把重心重复计算的情况给减去。<br>因此，$h_n=\begin{cases}f_n-\sum_{k=\frac{n+1}{2}}^{n-1}f_kf_{n-k}&amp;n为奇数\f_n-\sum_{k=\frac{n}{2}+1}^{n-1}f_kf_{n-k}-\binom{f_{\frac{n}{2}}}{2}&amp;n为偶数\end{cases}$。<br>即$H(x)=F(x)-\frac{1}{2}F(x)^2+F(x^2)$。</p>
+<h2 id="2-、无根树"><a href="#2-、无根树" class="headerlink" title="2*、无根树"></a>2*、无根树</h2><p>设有根树的OGF为$F(x)=\sum_{i=0}^\infty f_ix^i$，无根树的OGF为$H(x)=\sum_{i=0}^\infty h_ix^i$。<br>要统计无根树，只需统计以重心为根的有根树。根据重心的定义一个点是重心当且仅当它的每棵子树大小不超过$[\frac{n}{2}]$。<br>因此，一棵树有2个重心当且仅当重心最大子树的大小<strong>恰好</strong>是$\frac{n}{2}$，否则只有1个重心。当树有两个重心时，也要把重心重复计算的情况给减去。<br>因此，$h_n=\begin{cases}f_n-\sum_{k=\frac{n+1}{2}}^{n-1}f_kf_{n-k}&amp;n为奇数\\f_n-\sum_{k=\frac{n}{2}+1}^{n-1}f_kf_{n-k}-\binom{f_{\frac{n}{2}}}{2}&amp;n为偶数\end{cases}$。<br>即$H(x)=F(x)-\frac{1}{2}F(x)^2+F(x^2)$。</p>
 <h1 id="有标号计数"><a href="#有标号计数" class="headerlink" title="有标号计数"></a>有标号计数</h1><h2 id="1、无根树"><a href="#1、无根树" class="headerlink" title="1、无根树"></a>1、无根树</h2><p>由<a href=https://oi-wiki.org/graph/prufer/>Prufer序列</a>和无根树的一一对应关系，得答案$n^{n-2}$。</p>
 <h2 id="1-、有根树"><a href="#1-、有根树" class="headerlink" title="1*、有根树"></a>1*、有根树</h2><p>答案$n^{n-1}$。</p>
 <h2 id="2、无向连通图"><a href="#2、无向连通图" class="headerlink" title="2、无向连通图"></a>2、无向连通图</h2><p>设$n$阶有标号无向连通图有$f_n$种。<br>设$F(x)=\sum_{i=0}^\infty \frac{f_i}{i!}x^i$。<br>则$\exp F(x)=\sum_{i=0}^\infty\frac{2^\binom{i}{2}}{i!}x^i$。<br>即$F(x)=\ln\sum_{i=0}^\infty\frac{2^\binom{i}{2}}{i!}x^i$</p>
@@ -334,7 +334,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">abcdhhhh</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
     </div>
@@ -342,7 +342,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
@@ -354,6 +354,9 @@
   
 
 
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 
 
