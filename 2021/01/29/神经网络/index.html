@@ -33,8 +33,9 @@
 <meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/神经网络.assets/image-20210131084941074.png">
 <meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/神经网络.assets/image-20210131094718226.png">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-02-01T03:09:01.256Z">
+<meta property="article:modified_time" content="2021-02-01T06:00:25.300Z">
 <meta property="article:author" content="abcdhhhh">
+<meta property="article:tag" content="神经网络">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/神经网络.assets/image-20210131084941074.png">
 
@@ -164,14 +165,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
@@ -240,7 +245,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-01 11:09:01" itemprop="dateModified" datetime="2021-02-01T11:09:01+08:00">2021-02-01</time>
+        <time title="Modified: 2021-02-01 14:00:25" itemprop="dateModified" datetime="2021-02-01T14:00:25+08:00">2021-02-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,7 +280,7 @@
 <li>$\Theta^{(j)}$是一个$s_{j+1}\times (s_j+1)$的矩阵。</li>
 </ul>
 <h2 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h2><p>$\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$<br>$x_j^{(i)}$表示第$i$个训练数据的第$j$个特征，特征数$n=s_1$。</p>
-<p>记$X=\begin{bmatrix}x^{(1)}&amp;…&amp;x^{(m)}\end{bmatrix}^T=\begin{bmatrix}x_1^{(1)}&amp;…&amp;x_n^{(1)}\\x_1^{(2)}&amp;…&amp;x_n^{(2)}\...&amp;…&amp;…\\x_1^{(m)}&amp;…&amp;x_n^{(m)}\end{bmatrix}$，$Y=\begin{bmatrix}y^{(1)}&amp;…&amp;y^{(m)}\end{bmatrix}^T=\begin{bmatrix}y_1^{(1)}&amp;…&amp;y_K^{(1)}\\y_1^{(2)}&amp;…&amp;y_K^{(2)}\...&amp;…&amp;…\\y_1^{(m)}&amp;…&amp;y_K^{(m)}\end{bmatrix}$，$H=h_\Theta(X^T)^T$。</p>
+<p>记$X=\begin{bmatrix}x^{(1)}&amp;…&amp;x^{(m)}\end{bmatrix}^T=\begin{bmatrix}x_1^{(1)}&amp;…&amp;x_n^{(1)}\\x_1^{(2)}&amp;…&amp;x_n^{(2)}\\ …&amp;…&amp;…\\x_1^{(m)}&amp;…&amp;x_n^{(m)}\end{bmatrix}$，$Y=\begin{bmatrix}y^{(1)}&amp;…&amp;y^{(m)}\end{bmatrix}^T=\begin{bmatrix}y_1^{(1)}&amp;…&amp;y_K^{(1)}\\y_1^{(2)}&amp;…&amp;y_K^{(2)}\\ …&amp;…&amp;…\\y_1^{(m)}&amp;…&amp;y_K^{(m)}\end{bmatrix}$，$H=h_\Theta(X^T)^T$。</p>
 <p>代价函数：</p>
 <p>$J(\Theta)=-\frac{1}{m}tr(Y^T\log H+(1-Y)^T\log(1-H))+\frac{\lambda}{2m}\sum_{l=1}^{L-1}(||\Theta^{(l)}||^2-||\Theta e_0||^2)$</p>
 <p><img src="神经网络.assets/image-20210131094718226.png" alt="image-20210131094718226"></p>
@@ -308,6 +313,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="tag"># 神经网络</a>
+          </div>
 
         
 

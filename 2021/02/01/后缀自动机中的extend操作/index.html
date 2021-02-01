@@ -23,20 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="写在建站之后">
+<meta name="description" content="后缀自动机extend操作的代码如下。每次插入，会新建1~2个节点。1234567891011121314151617181920212223242526272829void extend(char c) &amp;#123;	int cur &#x3D; sz++; &#x2F;&#x2F; new state	st[cur].init();	st[cur].len &#x3D; st[last].len + 1; &#x2F;&#x2F; length	int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小记">
-<meta property="og:url" content="http://abcdhhhh.github.io/2021/01/29/%E5%B0%8F%E8%AE%B0/index.html">
+<meta property="og:title" content="后缀自动机中的extend操作">
+<meta property="og:url" content="http://abcdhhhh.github.io/2021/02/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%B8%AD%E7%9A%84extend%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="写在建站之后">
+<meta property="og:description" content="后缀自动机extend操作的代码如下。每次插入，会新建1~2个节点。1234567891011121314151617181920212223242526272829void extend(char c) &amp;#123;	int cur &#x3D; sz++; &#x2F;&#x2F; new state	st[cur].init();	st[cur].len &#x3D; st[last].len + 1; &#x2F;&#x2F; length	int">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-29T10:08:45.000Z">
-<meta property="article:modified_time" content="2021-01-30T02:46:01.601Z">
+<meta property="article:published_time" content="2021-02-01T07:40:54.000Z">
+<meta property="article:modified_time" content="2021-02-01T08:34:05.267Z">
 <meta property="article:author" content="abcdhhhh">
+<meta property="article:tag" content="后缀自动机">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://abcdhhhh.github.io/2021/01/29/%E5%B0%8F%E8%AE%B0/">
+<link rel="canonical" href="http://abcdhhhh.github.io/2021/02/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%B8%AD%E7%9A%84extend%E6%93%8D%E4%BD%9C/">
 
 
 <script class="page-configurations">
@@ -48,7 +49,7 @@
     lang   : 'en'
   };
 </script>
-<title>小记 | Hexo</title>
+<title>后缀自动机中的extend操作 | Hexo</title>
   
 
 
@@ -209,7 +210,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/01/29/%E5%B0%8F%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/02/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%B8%AD%E7%9A%84extend%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -222,7 +223,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          小记
+          后缀自动机中的extend操作
         </h1>
 
         <div class="post-meta-container">
@@ -232,30 +233,14 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-01-29 18:08:45" itemprop="dateCreated datePublished" datetime="2021-01-29T18:08:45+08:00">2021-01-29</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-30 10:46:01" itemprop="dateModified" datetime="2021-01-30T10:46:01+08:00">2021-01-30</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
-        </span>
+      <time title="Created: 2021-02-01 15:40:54 / Modified: 16:34:05" itemprop="dateCreated datePublished" datetime="2021-02-01T15:40:54+08:00">2021-02-01</time>
     </span>
 
   
 </div>
 
-            <div class="post-description">写在建站之后</div>
         </div>
       </header>
 
@@ -263,9 +248,81 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>没啥特别的目的，主要想体验一下建站是一种什么感觉<del>以及不喜欢CSDN的界面风格</del>。<br>关于写啥内容，暂时还没啥明确的想法。希望能早日写出一些有价值的东西吧。</p>
-<p>没有太多可说的，那就放一首歌吧。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1389794615&auto=1&height=66"></iframe>
+        <p>后缀自动机extend操作的代码如下。每次插入，会新建1~2个节点。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">extend</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> cur = sz++; <span class="comment">// new state</span></span><br><span class="line">	st[cur].init();</span><br><span class="line">	st[cur].len = st[last].len + <span class="number">1</span>; <span class="comment">// length</span></span><br><span class="line">	<span class="keyword">int</span> p = last;</span><br><span class="line">	<span class="keyword">while</span>(p != <span class="number">-1</span> &amp;&amp; st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">		st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] = cur;</span><br><span class="line">		p = st[p].link;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(p == <span class="number">-1</span>) &#123;</span><br><span class="line">		st[cur].link = <span class="number">0</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">int</span> q = st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">		<span class="keyword">if</span>(st[p].len + <span class="number">1</span> == st[q].len) &#123; <span class="comment">// no other state</span></span><br><span class="line">			st[cur].link = q;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">int</span> clone = sz++;</span><br><span class="line">			st[clone].len = st[p].len + <span class="number">1</span>;</span><br><span class="line">			st[clone].link = st[q].link;</span><br><span class="line">			rep(i, <span class="number">0</span>, <span class="number">25</span>) st[clone].nxt[i] = st[q].nxt[i];</span><br><span class="line">			<span class="keyword">while</span>(p != <span class="number">-1</span> &amp;&amp; st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] == q)&#123;</span><br><span class="line">				st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] = clone; <span class="comment">// transfer</span></span><br><span class="line">				p = st[p].link;</span><br><span class="line">			&#125;</span><br><span class="line">			st[q].link = st[cur].link = clone;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	last = cur;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>下面将用一些实例具体说明。</p>
+<p>（定义“等价后缀”为在串中出现（末）位置集合完全相同的后缀。）</p>
+<p>例1：$s=”a”+”b”$</p>
+<pre class="mermaid">graph LR;
+0((t0));
+style 0 fill:#f55, stroke:#5f5,stroke-width:2px;
+1((a));
+style 1 fill:#fff, stroke:#5f5,stroke-width:2px;
+2((ab));
+style 2 fill:#f55;
+0--a-->1;
+1-.->0;
+1--b-->2;
+linkStyle 2 stroke:#5f5,stroke-width:2px;
+0--b-->2;
+linkStyle 3 stroke:#5f5,stroke-width:2px;
+2-.->0;
+linkStyle 4 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;</pre>
+
+
+<p>没有非等价后缀。</p>
+<p>例2：$s=”ab”+”a”$</p>
+<pre class="mermaid">graph LR;
+0((t0));
+style 0 fill:#f55, stroke:#5f5,stroke-width:2px;
+1((a));
+style 1 fill:#f55;
+2((ab));
+style 2 fill:#fff, stroke:#5f5,stroke-width:2px;
+3((aba));
+style 3 fill:#f55;
+0--a-->1;
+1-.->0;
+1--b-->2;
+0--b-->2;
+2-.->0;
+2--a-->3;
+linkStyle 5 stroke:#5f5,stroke-width:2px;
+linkStyle 0 stroke:#55f,stroke-width:2px;
+3-.->1;
+linkStyle 6 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;</pre>
+
+<p>前一个非等价后缀是”a”。</p>
+<p>例3：$s=”ab”+”b”$</p>
+<pre class="mermaid">graph LR;
+0((t0));
+style 0 fill:#f55, stroke:#5f5,stroke-width:2px;
+1((a));
+style 1 fill:#fff;
+2((ab));
+style 2 fill:#fff, stroke:#5f5,stroke-width:2px;
+3((abb));
+style 3 fill:#f55;
+0--a-->1;
+1-.->0;
+1--b-->2;
+0--"b(deleted)"-->2;
+2-."(deleted)".->0;
+2--b-->3;
+linkStyle 5 stroke:#5f5,stroke-width:2px;
+4((b));
+style 4 fill:#f55;
+4--b-->3;
+linkStyle 6 stroke:#d6d,stroke-width:2px;
+0--b-->4;
+linkStyle 7 stroke:#d6d,stroke-width:2px;
+3-.->4;
+linkStyle 8 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;
+4-.->0;
+linkStyle 9 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;
+2-.->4;
+linkStyle 10 stroke:#d6d,stroke-width:2px,stroke-dasharray:5,5;</pre>
+
+<p>前一个非等价后缀是”b”，但”b”在原先表示”ab”的节点上，因此还需要把”b”状态分离一份出来，作为”ab”和”abb”的前一个非等价后缀。</p>
+
     </div>
 
     
@@ -273,16 +330,19 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA/" rel="tag"># 后缀自动机</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021/02/01/gym-102878E/" rel="prev" title="【gym_102878E】Eigen Substring（后缀自动机）">
+                  <i class="fa fa-chevron-left"></i> 【gym_102878E】Eigen Substring（后缀自动机）
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" rel="next" title="神经网络">
-                  神经网络 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
