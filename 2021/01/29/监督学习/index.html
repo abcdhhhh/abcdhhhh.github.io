@@ -31,7 +31,7 @@
 <meta property="og:description" content="举一反三的原理">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-01-30T11:01:49.468Z">
+<meta property="article:modified_time" content="2021-01-31T01:56:34.140Z">
 <meta property="article:author" content="abcdhhhh">
 <meta name="twitter:card" content="summary">
 
@@ -237,7 +237,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-30 19:01:49" itemprop="dateModified" datetime="2021-01-30T19:01:49+08:00">2021-01-30</time>
+        <time title="Modified: 2021-01-31 09:56:34" itemprop="dateModified" datetime="2021-01-31T09:56:34+08:00">2021-01-31</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -260,10 +260,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">ts(Training set);</span><br><span class="line">la(Learning algorithm);</span><br><span class="line">h(hypothesis function);</span><br><span class="line">1((x))</span><br><span class="line">2((y))</span><br><span class="line">ts--&gt;la--&gt;h;</span><br><span class="line">1--&gt;h--&gt;2;</span><br></pre></td></tr></table></figure>
-<h1 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h1><p>$\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$<br>$x_j^{(i)}$表示第$i$个训练数据的第$j$个特征。<br>记$X=\begin{bmatrix}x_0^{(1)}&amp;x_1^{(1)}&amp;…&amp;x_n^{(1)}\\x_0^{(2)}&amp;x_1^{(2)}&amp;…&amp;x_n^{(2)}\...&amp;…&amp;…&amp;…\\x_0^{(m)}&amp;x_1^{(m)}&amp;…&amp;x_n^{(m)}\end{bmatrix}$，$y=\begin{bmatrix}y^{(1)}\\y^{(2)}\...\\y^{(m)}\end{bmatrix}$。</p>
+        <h1 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h1><p><pre class="mermaid">graph TD;
+ts(Training set);
+la(Learning algorithm);
+h(hypothesis function);
+1((x))
+2((y))
+ts-->la-->h;
+1-->h-->2;</pre></p>
+<h1 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h1><p>$\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$<br>$x_j^{(i)}$表示第$i$个训练数据的第$j$个特征。<br>记$X=\begin{bmatrix}x^{(1)}&amp;x^{(2)}&amp;…&amp;x^{(m)}\end{bmatrix}^T=\begin{bmatrix}x_0^{(1)}&amp;x_1^{(1)}&amp;…&amp;x_n^{(1)}\\x_0^{(2)}&amp;x_1^{(2)}&amp;…&amp;x_n^{(2)}\...&amp;…&amp;…&amp;…\\x_0^{(m)}&amp;x_1^{(m)}&amp;…&amp;x_n^{(m)}\end{bmatrix}$，$y=\begin{bmatrix}y^{(1)}\\y^{(2)}\...\\y^{(m)}\end{bmatrix}$。</p>
 <h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>$x_i:=\frac{x_i-\mu_i}{s_i}$<br>其中$\mu_i$为平均值，$s_i$为标准差。</p>
-<h1 id="回归问题——线性回归"><a href="#回归问题——线性回归" class="headerlink" title="回归问题——线性回归"></a>回归问题——线性回归</h1><p>令$x_0=1$，$x=\begin{bmatrix}x_0\\x_1\...\\x_n\end{bmatrix}$，$\theta=\begin{bmatrix}\theta_0\\\theta_1\...\\\theta_n\end{bmatrix}$。<br>假设函数：$h_\theta (x)=\theta^Tx$。<br>记$X=\begin{bmatrix}x^{(1)}&amp;x^{(2)}&amp;…&amp;x^{(m)}\end{bmatrix}^T$，$h=\begin{bmatrix}h_\theta({x^{(1)})}\\h_\theta({x^{(2)})}\...\\h_\theta({x^{(m)})}\end{bmatrix}=X\theta$。<br>总代价函数：$J(\theta)=\frac{1}{2m}||h-y||^2=\frac{1}{2m}||X\theta-y||^2$</p>
+<h1 id="回归问题——线性回归"><a href="#回归问题——线性回归" class="headerlink" title="回归问题——线性回归"></a>回归问题——线性回归</h1><p>令$x_0=1$，$x=\begin{bmatrix}x_0\\x_1\...\\x_n\end{bmatrix}$，$\theta=\begin{bmatrix}\theta_0\\\theta_1\...\\\theta_n\end{bmatrix}$。<br>假设函数：$h_\theta (x)=\theta^Tx$。</p>
+<p>记$h=\begin{bmatrix}h_\theta({x^{(1)})}\\h_\theta({x^{(2)})}\...\\h_\theta({x^{(m)})}\end{bmatrix}=X\theta$。<br>总代价函数：$J(\theta)=\frac{1}{2m}||h-y||^2=\frac{1}{2m}||X\theta-y||^2$</p>
 <h2 id="tip-多项式回归转线性回归"><a href="#tip-多项式回归转线性回归" class="headerlink" title="tip: 多项式回归转线性回归"></a>tip: 多项式回归转线性回归</h2><p>将$x_1^2, x_1x_2^3$等高次项也作为特征。</p>
 <h2 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>不断迭代：$\theta :=\theta-\alpha \nabla J(\theta)$<br>其中：</p>
 <ul>
@@ -271,7 +279,7 @@
 <li>$\nabla J(\theta)=\frac{1}{m}X^T(X\theta-y)$为梯度</li>
 </ul>
 <h2 id="一般方程"><a href="#一般方程" class="headerlink" title="一般方程"></a>一般方程</h2><p>$\theta=(X^TX)^{-1}X^Ty$<br>当$X^TX$不可逆时，需思考特征是否过多（比如$m\le n$）。</p>
-<h1 id="二分类问题——logistic回归"><a href="#二分类问题——logistic回归" class="headerlink" title="二分类问题——logistic回归"></a>二分类问题——logistic回归</h1><p>sigmoid函数：$g(z)=\frac{1}{1+e^{-z}}$。<br>假设函数：$h_\theta (x)=g(\theta^Tx)=\frac{1}{1+e^{-\theta^Tx}}=P(y=1|x;\theta)$。<br>记$h=g(X\theta)$。</p>
+<h1 id="二分类问题——logistic回归"><a href="#二分类问题——logistic回归" class="headerlink" title="二分类问题——logistic回归"></a>二分类问题——logistic回归</h1><p>sigmoid函数：$g(z)=\frac{1}{1+e^{-z}}$。<br>hypothesis函数：$h_\theta (x)=g(\theta^Tx)=\frac{1}{1+e^{-\theta^Tx}}=P(y=1|x;\theta)$。<br>记$h=g(X\theta)$。</p>
 <p>决策函数：$y=[h_\theta(x)&gt;0.5]$<br>决策边界： $h_\theta(x)=0.5$，即$\theta^Tx=0$。</p>
 <p>代价函数：$\text{Cost}(h_\theta(x),y)=\begin{cases}-\log(h_\theta(x))&amp;y=1\-\log(1-h_\theta(x))&amp; y=0\end{cases}\\=-y\log(h_\theta(x))-(1-y)\log(1-h_\theta(x))$</p>
 <p>总代价函数：$J(\theta)=\frac{1}{m}\sum_{i=1}^m\text{Cost}(h_\theta(x^{(i)}),y^{(i)})\\=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))\\=\frac{1}{m}(y^T\log(1+e^{-X\theta})+(1-y)^T\log(1+e^{X\theta}))$</p>
@@ -283,7 +291,9 @@
 </ol>
 </li>
 </ul>
-<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><p>增加penalty以控制$\theta$规模。（$\theta_0$除外）<br>回归问题<br>$J(\theta)=\frac{1}{2m}||h-y||^2+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$<br>分类问题<br>$J(\theta)=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$<br>$\theta_j :=\theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} (j\ne 0)$<br>（若$\lambda$过大，会导致$\theta$过小，从而导致欠拟合。）<br>一般方程<br>$\theta=(X^TX+\lambda \begin{bmatrix}0&amp;O\\O&amp;I_n\end{bmatrix})^{-1}X^Ty$<br>（还可以解决矩阵不可逆问题）</p>
+<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><p>增加penalty以控制$\theta$规模。（$\theta_0$除外）<br>回归问题<br>$J(\theta)=\frac{1}{2m}||h-y||^2+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$<br>分类问题</p>
+<p>$J(\theta)=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$</p>
+<p>$\theta_j :=\theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} (j\ne 0)$<br>（若$\lambda$过大，会导致$\theta$过小，从而导致欠拟合。）<br>一般方程<br>$\theta=(X^TX+\lambda \begin{bmatrix}0&amp;O\\O&amp;I_n\end{bmatrix})^{-1}X^Ty$<br>（还可以解决矩阵不可逆问题）</p>
 
     </div>
 

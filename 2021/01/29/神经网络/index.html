@@ -30,14 +30,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="多层结构">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2021012811333381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20210128154159668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20210128160513622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/神经网络.assets/image-20210131084941074.png">
+<meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/神经网络.assets/image-20210131094718226.png">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-01-30T11:06:20.536Z">
+<meta property="article:modified_time" content="2021-02-01T03:09:01.256Z">
 <meta property="article:author" content="abcdhhhh">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2021012811333381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/神经网络.assets/image-20210131084941074.png">
 
 
 <link rel="canonical" href="http://abcdhhhh.github.io/2021/01/29/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
@@ -152,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E7%A7%BB%E6%96%B9%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">转移方程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#e-g-OR-function"><span class="nav-number">2.1.</span> <span class="nav-text">e.g. OR function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e-g-XNOR-function"><span class="nav-number">2.2.</span> <span class="nav-text">e.g. XNOR function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-multiclass-classification"><span class="nav-number">2.3.</span> <span class="nav-text">tip: multiclass classification</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E9%9B%86"><span class="nav-number">1.1.</span> <span class="nav-text">训练集</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">反向传播算法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -241,7 +240,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-30 19:06:20" itemprop="dateModified" datetime="2021-01-30T19:06:20+08:00">2021-01-30</time>
+        <time title="Modified: 2021-02-01 11:09:01" itemprop="dateModified" datetime="2021-02-01T11:09:01+08:00">2021-02-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,18 +263,43 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h1><p><img src="https://img-blog.csdnimg.cn/2021012811333381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h1 id="转移方程"><a href="#转移方程" class="headerlink" title="转移方程"></a>转移方程</h1><p><img src="https://img-blog.csdnimg.cn/20210128154159668.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>记第$j$层的第$i$个unit为$a_i^{(j)}$。<br>转移方程：$a^{(j+1)}=g(\Theta^{(j)}\begin{bmatrix}a_0^{(j)}\\a^{(j)}\end{bmatrix})$。<br>其中</p>
+        <h1 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h1><p><img src="神经网络.assets/image-20210131084941074.png" alt="image-20210131084941074"></p>
+<p>神经网络共有$L$层，第$j$层$a^{(j)}$有$s_j$个unit（相当于feature），其中第$i$个unit记为$a_i^{(j)}$。</p>
+<p>二分类问题$s_L=1$，多（$K\ge 3$）分类问题$S_L=K$。</p>
+<p>特别地，记$x=a^{(1)}, h_\Theta(x)=a^{(L)}$。</p>
+<p>第$j$层到第$j+1$层的转移是Logistic回归：$a^{(j+1)}=g(\Theta^{(j)}\begin{bmatrix}a_0^{(j)}\\a^{(j)}\end{bmatrix})$。</p>
+<p>其中</p>
 <ul>
 <li>$a_0^{(j)}=1$为bias unit。</li>
-<li>$g(z)$为sigmoid function: $g(z)=\frac{1}{1+e^{-\theta^Tz}}$。</li>
+<li>$g(z)$为sigmoid function: $g(z)=\frac{1}{1+e^{-z}}$。（目的是使得数值接近0或1）</li>
+<li>$\Theta^{(j)}$是一个$s_{j+1}\times (s_j+1)$的矩阵。</li>
 </ul>
-<p>若第$j$层有$s_j$个unit，则$\Theta^{(j)}$是一个$s_{j+1}\times (s_j+1)$的矩阵。</p>
-<h2 id="e-g-OR-function"><a href="#e-g-OR-function" class="headerlink" title="e.g. OR function"></a>e.g. OR function</h2><p><img src="https://img-blog.csdnimg.cn/20210128160513622.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3OTAzODY1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>可以直接通过线性函数近似获得。<br>共2层，第1层有2个unit: $a_1^{(1)}=x_1, a_2^{(1)}=x_2$。<br>$\Theta^{(1)}=\begin{bmatrix}-10&amp;20&amp;20\end{bmatrix}$。</p>
-<h2 id="e-g-XNOR-function"><a href="#e-g-XNOR-function" class="headerlink" title="e.g. XNOR function"></a>e.g. XNOR function</h2><p>XNOR不能通过线性函数近似得到，但可以利用$x\odot y=xy+\bar{x}\bar{y}$计算。</p>
-<p>可见，多层神经网络可以更方便地处理<strong>非线性</strong>分类问题（不需要增加大量变量）。</p>
-<h2 id="tip-multiclass-classification"><a href="#tip-multiclass-classification" class="headerlink" title="tip: multiclass classification"></a>tip: multiclass classification</h2><p>输出层有多个unit，结果选择最贴近的那个unit。</p>
+<h2 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h2><p>$\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$<br>$x_j^{(i)}$表示第$i$个训练数据的第$j$个特征，特征数$n=s_1$。</p>
+<p>记$X=\begin{bmatrix}x^{(1)}&amp;…&amp;x^{(m)}\end{bmatrix}^T=\begin{bmatrix}x_1^{(1)}&amp;…&amp;x_n^{(1)}\\x_1^{(2)}&amp;…&amp;x_n^{(2)}\...&amp;…&amp;…\\x_1^{(m)}&amp;…&amp;x_n^{(m)}\end{bmatrix}$，$Y=\begin{bmatrix}y^{(1)}&amp;…&amp;y^{(m)}\end{bmatrix}^T=\begin{bmatrix}y_1^{(1)}&amp;…&amp;y_K^{(1)}\\y_1^{(2)}&amp;…&amp;y_K^{(2)}\...&amp;…&amp;…\\y_1^{(m)}&amp;…&amp;y_K^{(m)}\end{bmatrix}$，$H=h_\Theta(X^T)^T$。</p>
+<p>代价函数：</p>
+<p>$J(\Theta)=-\frac{1}{m}tr(Y^T\log H+(1-Y)^T\log(1-H))+\frac{\lambda}{2m}\sum_{l=1}^{L-1}(||\Theta^{(l)}||^2-||\Theta e_0||^2)$</p>
+<p><img src="神经网络.assets/image-20210131094718226.png" alt="image-20210131094718226"></p>
+<p>求$\min_\Theta J(\Theta)$需要的信息：</p>
+<ul>
+<li>$J(\Theta)$</li>
+<li>$\frac{\partial}{\partial \Theta_{i,j}^{(l)}}J(\Theta)$</li>
+</ul>
+<h1 id="反向传播算法"><a href="#反向传播算法" class="headerlink" title="反向传播算法"></a>反向传播算法</h1><p>记$\delta_j^{(l)}$为计算$a_j^{(l)}$出现的偏差。</p>
+<p>$\delta^{(L)}=h_\Theta(x)-y$</p>
+<p>$\delta^{(l)}=(\Theta^{(l)})^T\delta^{(l+1)}.*g’(z^{(l)})$</p>
+<p>$g’(z^{(l)})=a^{(l)}.*(1-a^{(l)})$</p>
+<p>算法流程：</p>
+<blockquote>
+<p>Training set: $\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$</p>
+<p>set $\Delta^{(l)}=O_{s_{l+1}\times s_l}$</p>
+<p>for i = 1:m</p>
+<p>​    set $a^{(1)}=x^{(i)}$</p>
+<p>​    compute $a^{(l)}(l=2,3,…,L)$</p>
+<p>​    compute $\delta^{(l)}(l=L,L-1,…,2)$</p>
+<p>​    $\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}a^{(l)T}$</p>
+<p>end</p>
+</blockquote>
+<p>则$\frac{\partial}{\partial \Theta_{i,j}^{(l)}}J(\Theta)=D_{i,j}^{(l)}=\Delta_{i,j}^{(l)}+\lambda\Theta_{i,j}^{(l)}[j\ne 0]$。</p>
 
     </div>
 
