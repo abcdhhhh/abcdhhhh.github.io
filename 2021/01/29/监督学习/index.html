@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/监督学习.assets/image-20210214094906957.png">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-02-15T02:01:49.763Z">
+<meta property="article:modified_time" content="2021-02-20T12:38:04.921Z">
 <meta property="article:author" content="abcdhhhh">
 <meta property="article:tag" content="回归分析">
 <meta name="twitter:card" content="summary">
@@ -151,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">训练集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">标准化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">3.</span> <span class="nav-text">回归问题——线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92"><span class="nav-number">3.1.</span> <span class="nav-text">tip: 多项式回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%96%B9%E7%A8%8B"><span class="nav-number">3.3.</span> <span class="nav-text">一般方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94logistic%E5%9B%9E%E5%BD%92"><span class="nav-number">4.</span> <span class="nav-text">二分类问题——logistic回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-1"><span class="nav-number">4.1.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E5%A4%9A%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="nav-number">4.2.</span> <span class="nav-text">tip: 多分类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.3.</span> <span class="nav-text">正则化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overfit%E4%B8%8Eunderfit"><span class="nav-number">4.4.</span> <span class="nav-text">overfit与underfit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">5.</span> <span class="nav-text">神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86%EF%BC%9A-Hadamard%E7%A7%AF"><span class="nav-number">5.1.</span> <span class="nav-text">预备知识： Hadamard积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">反向传播算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">支持向量机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-Gaussian-kernal"><span class="nav-number">6.1.</span> <span class="nav-text">tip: Gaussian kernal</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">训练集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">标准化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">3.</span> <span class="nav-text">回归问题——线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%96%B9%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">一般方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94logistic%E5%9B%9E%E5%BD%92"><span class="nav-number">4.</span> <span class="nav-text">二分类问题——logistic回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-1"><span class="nav-number">4.1.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">4.1.1.</span> <span class="nav-text">随机梯度下降法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-learning"><span class="nav-number">4.1.2.</span> <span class="nav-text">online learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">正则化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overfit%E4%B8%8Eunderfit"><span class="nav-number">4.3.</span> <span class="nav-text">overfit与underfit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">5.</span> <span class="nav-text">神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadamard%E7%A7%AF"><span class="nav-number">5.1.</span> <span class="nav-text">Hadamard积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">反向传播算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">支持向量机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-Gaussian-kernal"><span class="nav-number">6.1.</span> <span class="nav-text">tip: Gaussian kernal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E6%89%A9%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%A7%84%E6%A8%A1"><span class="nav-number">6.2.</span> <span class="nav-text">tip: 扩大数据规模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-map-reduce"><span class="nav-number">6.3.</span> <span class="nav-text">tip: map reduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E4%B8%8A%E9%99%90%E5%88%86%E6%9E%90"><span class="nav-number">6.4.</span> <span class="nav-text">tip: 上限分析</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -174,7 +174,7 @@
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -244,7 +244,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-15 10:01:49" itemprop="dateModified" datetime="2021-02-15T10:01:49+08:00">2021-02-15</time>
+        <time title="Modified: 2021-02-20 20:38:04" itemprop="dateModified" datetime="2021-02-20T20:38:04+08:00">2021-02-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,29 +282,32 @@ h(hypothesis function);
 2((y))
 ts-->la-->h;
 1-->h-->2;</pre></p>
-<h1 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h1><p>$\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$<br>$x_j^{(i)}$表示第$i$个训练数据的第$j$个特征。<br>记$X=\begin{bmatrix}x^{(1)}&amp;x^{(2)}&amp;…&amp;x^{(m)}\end{bmatrix}^T=\begin{bmatrix}x_0^{(1)}&amp;x_1^{(1)}&amp;…&amp;x_n^{(1)}\\x_0^{(2)}&amp;x_1^{(2)}&amp;…&amp;x_n^{(2)}\...&amp;…&amp;…&amp;…\\x_0^{(m)}&amp;x_1^{(m)}&amp;…&amp;x_n^{(m)}\end{bmatrix}$，$y=\begin{bmatrix}y^{(1)}\\y^{(2)}\...\\y^{(m)}\end{bmatrix}$。</p>
-<h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>$x_i:=\frac{x_i-\mu_i}{s_i}$<br>其中$\mu_i$为平均值，$s_i$为标准差。</p>
-<h1 id="回归问题——线性回归"><a href="#回归问题——线性回归" class="headerlink" title="回归问题——线性回归"></a>回归问题——线性回归</h1><p>令$x_0=1$，$x=\begin{bmatrix}x_0\\x_1\...\\x_n\end{bmatrix}$，$\theta=\begin{bmatrix}\theta_0\\\theta_1\...\\\theta_n\end{bmatrix}$。<br>假设函数：$h_\theta (x)=\theta^Tx$。</p>
-<p>记$h=\begin{bmatrix}h_\theta({x^{(1)})}\\h_\theta({x^{(2)})}\...\\h_\theta({x^{(m)})}\end{bmatrix}=X\theta$。<br>总代价函数：$J(\theta)=\frac{1}{2m}||h-y||^2=\frac{1}{2m}||X\theta-y||^2$</p>
-<h2 id="tip-多项式回归"><a href="#tip-多项式回归" class="headerlink" title="tip: 多项式回归"></a>tip: 多项式回归</h2><p>将$x_1^2, x_1x_2^3$等高次项作为特征。</p>
+<h1 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h1><p>$\{(x^{(i)},y^{(i)})|i=1,2,…,m\}$<br>$x_j^{(i)}$表示第$i$个训练数据的第$j$个特征。</p>
+<h2 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h2><p>$x_i:=\frac{x_i-\bar{x}}{\sigma}$</p>
+<h1 id="回归问题——线性回归"><a href="#回归问题——线性回归" class="headerlink" title="回归问题——线性回归"></a>回归问题——线性回归</h1><p>令$x_0=1$，$x=\begin{bmatrix}x_0\\x_1\...\\x_n\end{bmatrix}$，$\theta=\begin{bmatrix}\theta_0\\\theta_1\...\\\theta_n\end{bmatrix}$。<br>hypothesis函数：$h_\theta (x)=\theta^Tx$。<br>总cost函数：$J(\theta)=\frac{1}{2}\text{mean}(||h-y||^2)$</p>
+<p>（多项式回归：将$x_1^2, x_1x_2^3$等高次项作为特征）</p>
 <h2 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>不断迭代：$\theta :=\theta-\alpha \nabla J(\theta)$<br>其中：</p>
 <ul>
 <li>$\alpha$为学习速率</li>
-<li>$\nabla J(\theta)=\frac{1}{m}X^T(X\theta-y)$为梯度</li>
+<li>$\nabla J(\theta)=\text{mean}(x(h-y))$为梯度</li>
 </ul>
-<h2 id="一般方程"><a href="#一般方程" class="headerlink" title="一般方程"></a>一般方程</h2><p>$\theta=(X^TX)^{-1}X^Ty$<br>当$X^TX$不可逆时，需思考特征是否过多（比如$m\le n$）。</p>
-<h1 id="二分类问题——logistic回归"><a href="#二分类问题——logistic回归" class="headerlink" title="二分类问题——logistic回归"></a>二分类问题——logistic回归</h1><p>sigmoid函数：$g(z)=\frac{1}{1+e^{-z}}$。<br>hypothesis函数：$h_\theta (x)=g(\theta^Tx)=\frac{1}{1+e^{-\theta^Tx}}=P(y=1|x;\theta)$。<br>记$h=g(X\theta)$。</p>
+<h2 id="一般方程"><a href="#一般方程" class="headerlink" title="一般方程"></a>一般方程</h2><p>求$X\theta=y$的最小二乘解：$\theta=(X^TX)^{-1}X^Ty$</p>
+<p>（若$X^TX$不可逆，可能是feature过多）</p>
+<h1 id="二分类问题——logistic回归"><a href="#二分类问题——logistic回归" class="headerlink" title="二分类问题——logistic回归"></a>二分类问题——logistic回归</h1><p>sigmoid函数：$g(z)=\frac{1}{1+e^{-z}}$。<br>hypothesis函数：$h_\theta (x)=g(\theta^Tx)=\frac{1}{1+e^{-\theta^Tx}}=P(y=1|x;\theta)$。</p>
 <p>决策函数：$y=[h_\theta(x)&gt;0.5]$<br>决策边界： $h_\theta(x)=0.5$，即$\theta^Tx=0$。</p>
-<p>代价函数：$\text{Cost}(h_\theta(x),y)=\begin{cases}-\log(h_\theta(x))&amp;y=1\-\log(1-h_\theta(x))&amp; y=0\end{cases}\\=-y\log(h_\theta(x))-(1-y)\log(1-h_\theta(x))$</p>
-<p>总代价函数：$J(\theta)=\frac{1}{m}\sum_{i=1}^m\text{Cost}(h_\theta(x^{(i)}),y^{(i)})\\=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))\\=\frac{1}{m}(y^T\log(1+e^{-X\theta})+(1-y)^T\log(1+e^{X\theta}))$</p>
+<p>cost函数：$\text{Cost}(h_\theta(x),y)=\begin{cases}-\log(h_\theta(x))&amp;y=1\-\log(1-h_\theta(x))&amp; y=0\end{cases}\\=-y\log(h_\theta(x))-(1-y)\log(1-h_\theta(x))$</p>
+<p>总cost函数：$J(\theta)=\text{meanCost}(h_\theta(x),y)\\=-\text{mean}(y\log(h)+(1-y)\log(1-h))\\=\text{mean}(y\log(1+e^{-\theta^Tx})+(1-y)\log(1+e^{\theta^Tx}))$</p>
 <h2 id="梯度下降法-1"><a href="#梯度下降法-1" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>不断迭代：$\theta :=\theta-\alpha \nabla J(\theta)$<br>其中：</p>
 <ul>
-<li>$\nabla J(\theta)=\frac{1}{m}X^T(h-y)$<h2 id="tip-多分类问题"><a href="#tip-多分类问题" class="headerlink" title="tip: 多分类问题"></a>tip: 多分类问题</h2>面对每个新的数据集，都逐类进行检验（把要检验的类当作1，其余当作0），选择可能性最高的那类。</li>
+<li>$\nabla J(\theta)=\text{mean}(x(h-y))$为梯度</li>
 </ul>
-<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><p>增加penalty以控制$\theta$规模。（$\theta_0$除外）<br>回归问题<br>$J(\theta)=\frac{1}{2m}||h-y||^2+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$<br>分类问题</p>
+<p>（多分类问题：面对每个新的数据集，都逐类进行检验（把要检验的类当作1，其余当作0），选择可能性最高的那类）</p>
+<h3 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h3><p>对于规模较大的数据集，可以随机选一个样本算cost</p>
+<h3 id="online-learning"><a href="#online-learning" class="headerlink" title="online learning"></a>online learning</h3><p>每次获得一个新的训练集，都用它的cost进行一次梯度下降</p>
+<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><p>增加penalty以控制$\theta$规模。（$\theta_0$除外）<br>回归问题<br>$J(\theta)=\frac{1}{2}\text{mean}(||h-y||^2+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$<br>分类问题</p>
 <p>$J(\theta)=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$</p>
 <p>$\theta_j :=\theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} (j\ne 0)$</p>
-<p>一般方程<br>$\theta=(X^TX+\lambda \begin{bmatrix}0&amp;O\\O&amp;I_n\end{bmatrix})^{-1}X^Ty$<br>（还可以解决矩阵不可逆问题）</p>
+<p>一般方程<br>$\theta=(X^TX+\lambda \begin{bmatrix}0&amp;O\\O&amp;I_n\end{bmatrix})^{-1}X^Ty$<br>（可以解决矩阵不可逆的问题）</p>
 <h2 id="overfit与underfit"><a href="#overfit与underfit" class="headerlink" title="overfit与underfit"></a>overfit与underfit</h2><div class="table-container">
 <table>
 <thead>
@@ -329,24 +332,21 @@ ts-->la-->h;
 </table>
 </div>
 <h1 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h1><p>神经网络是一个多层感知机。从输入到输出共有$L$层，第$l$层$a^{(l)}$有$s_l$个unit。（$K$分类问题中$s_L=K$）</p>
-<p>相邻两层之间的转移是Logistic回归（一个带偏移的线性变换+一个sigmoid函数）：</p>
+<p>相邻两层之间的转移是Logistic回归（一个线性变换+一个sigmoid函数）：</p>
 <p>$z^{(l+1)}=W^{(l)}a^{(l)}+b^{(l)}, a^{(l+1)}=g(z^{(l+1)})$</p>
 <p>其中$W^{(l)}\in R^{s_{l+1}\times s_l}, b^{(l)}\in R^{s_{l+1}}$，$g(z)=\frac{1}{1+e^{-z}}$。</p>
-<p>$J(\Theta)=-\text{mean}(y^T\log h-(1-y)^T\log (1-h))+||W||^2$</p>
-<p>我们的目标是求$\Theta$以最小化$J(\Theta)$。</p>
-<p>该过程采用梯度下降法，因此需要知道每一步的$\frac{\partial}{\partial W_{i,j}^{(l)}}J(\Theta)$以及$\frac{\partial}{\partial b_{i}^{(l)}}J(\Theta)$，而这可以利用反向传播算法算出。</p>
-<h2 id="预备知识：-Hadamard积"><a href="#预备知识：-Hadamard积" class="headerlink" title="预备知识： Hadamard积"></a>预备知识： Hadamard积</h2><p>即对应元素的乘积。</p>
+<p>$J=-\text{mean}(y\log h-(1-y)\log (1-h))+||W||^2$</p>
+<p>我们的目标是求$W,b$以最小化$J$。</p>
+<p>梯度下降法需要知道每一步的$\frac{\partial}{\partial W_{i,j}^{(l)}}J$以及$\frac{\partial}{\partial b_{i}^{(l)}}J$。</p>
+<h2 id="Hadamard积"><a href="#Hadamard积" class="headerlink" title="Hadamard积"></a>Hadamard积</h2><p>即矩阵对应位置元素乘积运算。</p>
 <p>$S_{n\times m}\circ T_{n\times m}=\begin{bmatrix}s_{11}t_{11}&amp;s_{12}t_{12}&amp;…&amp;s_{1m}t_{1m}\\ s_{21}t_{21}&amp;s_{22}t_{22}&amp;…&amp;s_{2m}t_{2m}\\ …&amp;…&amp;…&amp;…\\ s_{n1}t_{n1}&amp;s_{n2}t_{n2}&amp;…&amp;s_{nm}t_{nm}\end{bmatrix}$</p>
-<h2 id="反向传播算法"><a href="#反向传播算法" class="headerlink" title="反向传播算法"></a>反向传播算法</h2><p>$g’(z)=\frac{e^{-z}}{(1+e^{-z})^2}=g(z)(1-g(z))$</p>
-<p>$\Delta a^{(l+1)}=\Delta z^{(l+1)}\circ g’(z^{(l+1)})=\Delta a^{(l)}W^{(l)}\circ a^{(l+1)}\circ (1-a^{(l+1)})$</p>
-<p>可以从后往前求出每层的偏差。</p>
-<p>$\frac{\partial h}{\partial W_{i,j}^{(l)}}=\Delta a_{j}^{(l)}a_i^{(l)}$</p>
+<h2 id="反向传播算法"><a href="#反向传播算法" class="headerlink" title="反向传播算法"></a>反向传播算法</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_47903865/article/details/113839061">https://blog.csdn.net/qq_47903865/article/details/113839061</a></p>
 <h1 id="支持向量机"><a href="#支持向量机" class="headerlink" title="支持向量机"></a>支持向量机</h1><p>目标：</p>
 <p>$\min_\theta C\sum(y \text{cost}_1(\theta^Tx)+(1-y)\text{cost}_0(\theta^Tx))+\frac{1}{2}||\theta||^2$</p>
 <p>其中$C=\frac{1}{\lambda}$</p>
 <p><img src="监督学习.assets/image-20210214094906957.png" alt="image-20210214094906957"></p>
 <p>当$\begin{cases}\theta^Tx\ge 1&amp;h=1\\\theta^Tx\le -1&amp;h=0\end{cases}$时，$y \text{cost}_1(\theta^Tx)+(1-y)\text{cost}_0(\theta^Tx)=0$。</p>
-<h2 id="tip-Gaussian-kernal"><a href="#tip-Gaussian-kernal" class="headerlink" title="tip: Gaussian kernal"></a>tip: Gaussian kernal</h2><p>选取landmark $l$，利用<strong>正态分布</strong>（note: feature scaling）：</p>
+<h2 id="tip-Gaussian-kernal"><a href="#tip-Gaussian-kernal" class="headerlink" title="tip: Gaussian kernal"></a>tip: Gaussian kernal</h2><p>选取landmark $l$，利用<strong>正态分布</strong>曲线：</p>
 <p>$f=\exp(-\frac{||z-l||^2}{2\sigma^2})$</p>
 <div class="table-container">
 <table>
@@ -389,6 +389,9 @@ ts-->la-->h;
 </tbody>
 </table>
 </div>
+<h2 id="tip-扩大数据规模"><a href="#tip-扩大数据规模" class="headerlink" title="tip: 扩大数据规模"></a>tip: 扩大数据规模</h2><p>在原数据上增加干扰</p>
+<h2 id="tip-map-reduce"><a href="#tip-map-reduce" class="headerlink" title="tip: map reduce"></a>tip: map reduce</h2><p>把训练集分给多台计算机并行计算。</p>
+<h2 id="tip-上限分析"><a href="#tip-上限分析" class="headerlink" title="tip: 上限分析"></a>tip: 上限分析</h2><p>分析机器学习流水线各阶段准确率上限，从而避免无用功</p>
 
     </div>
 
