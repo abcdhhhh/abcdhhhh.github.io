@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/监督学习.assets/image-20210214094906957.png">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-02-20T12:38:04.921Z">
+<meta property="article:modified_time" content="2021-02-23T12:01:31.338Z">
 <meta property="article:author" content="abcdhhhh">
 <meta property="article:tag" content="回归分析">
 <meta name="twitter:card" content="summary">
@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -174,7 +174,7 @@
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -244,7 +244,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-20 20:38:04" itemprop="dateModified" datetime="2021-02-20T20:38:04+08:00">2021-02-20</time>
+        <time title="Modified: 2021-02-23 20:01:31" itemprop="dateModified" datetime="2021-02-23T20:01:31+08:00">2021-02-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,8 +304,13 @@ ts-->la-->h;
 <p>（多分类问题：面对每个新的数据集，都逐类进行检验（把要检验的类当作1，其余当作0），选择可能性最高的那类）</p>
 <h3 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h3><p>对于规模较大的数据集，可以随机选一个样本算cost</p>
 <h3 id="online-learning"><a href="#online-learning" class="headerlink" title="online learning"></a>online learning</h3><p>每次获得一个新的训练集，都用它的cost进行一次梯度下降</p>
-<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><p>增加penalty以控制$\theta$规模。（$\theta_0$除外）<br>回归问题<br>$J(\theta)=\frac{1}{2}\text{mean}(||h-y||^2+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$<br>分类问题</p>
-<p>$J(\theta)=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))+\frac{\lambda}{2m}(||\theta||^2-\theta_0^2)$</p>
+<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><p>增加penalty以控制$\theta$规模。（$\theta_0$除外）</p>
+<ul>
+<li>L1范数（绝对值和）：Lasso回归</li>
+<li>L2范数（平方和）：岭回归</li>
+</ul>
+<p>回归问题<br>$J(\theta)=\frac{1}{2}\text{mean}(||h-y||^2+\frac{\lambda}{2m}(||\theta||^2)$<br>分类问题</p>
+<p>$J(\theta)=-\frac{1}{m}(y^T\log(h)+(1-y)^T\log(1-h))+\frac{\lambda}{2m}(||\theta||^2)$</p>
 <p>$\theta_j :=\theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} (j\ne 0)$</p>
 <p>一般方程<br>$\theta=(X^TX+\lambda \begin{bmatrix}0&amp;O\\O&amp;I_n\end{bmatrix})^{-1}X^Ty$<br>（可以解决矩阵不可逆的问题）</p>
 <h2 id="overfit与underfit"><a href="#overfit与underfit" class="headerlink" title="overfit与underfit"></a>overfit与underfit</h2><div class="table-container">

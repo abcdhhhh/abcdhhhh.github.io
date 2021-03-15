@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,7 +168,7 @@
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -274,6 +274,104 @@
     u--"w[u][v]+h[u]-h[v]"-->v</pre>
 
 <h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/02/15/%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="abcdhhhh">
+      <meta itemprop="description" content="This is my personal blog.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/02/15/%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">博弈模型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-02-15 19:55:30" itemprop="dateCreated datePublished" datetime="2021-02-15T19:55:30+08:00">2021-02-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-03-15 14:50:39" itemprop="dateModified" datetime="2021-03-15T14:50:39+08:00">2021-03-15</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ACM/" itemprop="url" rel="index"><span itemprop="name">ACM</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2021/02/15/%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/" class="post-meta-item leancloud_visitors" data-flag-title="博弈模型" title="Views">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="nim-k游戏"><a href="#nim-k游戏" class="headerlink" title="nim-k游戏"></a>nim-k游戏</h4><p>有n堆石子，每次可以从至多k堆中拿走任意数量的石子。（可以每堆拿的不一样）</p>
+<p>不能拿的输。</p>
+<p>先手必胜条件：把n堆石子用二进制表示，统计每一位上面的1的个数，如果每一位1的个数 mod (k+1)全为0，则先手必败。否则先手必胜。</p>
+<p>证明：类比一堆石子共n个，每次去1~m个，不能动为输。</p>
+<p>（比较显然，考虑不全是0的时候，从高位到低位取成0，如果这位的数比之前少，那么可以在前面不全去完，而是剩一些，在这里加个1之类的，比之前多就把新的弄小</p>
+<h4 id="二分图博弈"><a href="#二分图博弈" class="headerlink" title="二分图博弈"></a>二分图博弈</h4><p>给一张二分图和一个起点，轮流在上面走，不能走重复的点，不能走就输。</p>
+<p>先手必败当且仅当存在一个最大匹配使得起点不在这个匹配里面。（去掉起点跑最大匹配，加回来再跑一次，增广了就是先手败）</p>
+<p>结论可以扩展到一般图上面，结论不变。</p>
+<p>二分图证明：因为是二分图，停在起点一边就是先手败，否则后手败。</p>
+<p>如果起点可以不在最大匹配：先手随便走，后手按照匹配边走。这样不可能停在另一边，否则就是一条增广路。</p>
+<p>如果起点必须在最大匹配：先手按照固定的一个最大匹配走，随便后手怎么走，最后如果是停在先手一边，说明是$k$条匹配边，$k$条非匹配边，并且终点一定是一个非匹配点，否则先手还能走。异或一下就是一个不包括起点的最大匹配。</p>
+<p>这个证明也适用于一般图。</p>
+
       
     </div>
 
@@ -678,7 +776,7 @@ linkStyle 10 stroke:#d6d,stroke-width:2px,stroke-dasharray:5,5;</pre>
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-20 20:38:04" itemprop="dateModified" datetime="2021-02-20T20:38:04+08:00">2021-02-20</time>
+        <time title="Modified: 2021-02-23 20:01:31" itemprop="dateModified" datetime="2021-02-23T20:01:31+08:00">2021-02-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
