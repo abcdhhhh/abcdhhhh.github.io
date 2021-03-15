@@ -6,7 +6,7 @@
   <link href="http://abcdhhhh.github.io/atom.xml" rel="self"/>
   
   <link href="http://abcdhhhh.github.io/"/>
-  <updated>2021-02-15T12:02:11.038Z</updated>
+  <updated>2021-03-15T06:58:43.368Z</updated>
   <id>http://abcdhhhh.github.io/</id>
   
   <author>
@@ -21,19 +21,12 @@
     <link href="http://abcdhhhh.github.io/2021/02/15/Dijkstra%E5%AE%9E%E7%8E%B0%E8%B4%B9%E7%94%A8%E6%B5%81/"/>
     <id>http://abcdhhhh.github.io/2021/02/15/Dijkstra%E5%AE%9E%E7%8E%B0%E8%B4%B9%E7%94%A8%E6%B5%81/</id>
     <published>2021-02-15T11:55:30.000Z</published>
-    <updated>2021-02-15T12:02:11.038Z</updated>
+    <updated>2021-03-15T06:58:43.368Z</updated>
     
     <content type="html"><![CDATA[<ol><li><p>用SPFA求出源点到每个点的最短距离</p></li><li><p>为每个点 i 赋点权 h[i]为dis[i] ,并视每条连接 u,v 的边 i 的边权 w’[i] 为 w[i]+h[u]-h[v] 。</p><p>由于对于任意两点 u,v ,有<strong>w[u][v]+h[u]-h[v]≥0</strong> ,所以 w’ [i]≥0 ,这样一来新图上的 dis’[i] 就等于<strong> dis[i]+h[S]-h[i]</strong>。</p><p>由于每次跑最短路时 h[i] 都是不变的,所以求出了 dis’[i] 也就求出了 dis[i] ( dis[i]=dis’[i]-h[S]+h[i] ,其实很显然 h[S]=0 )</p></li></ol><pre class="mermaid">graph LR;    u((u))    v((v))    u--"w[u][v]+h[u]-h[v]"-->v</pre><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;用SPFA求出源点到每个点的最短距离&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;为每个点 i 赋点权 h[i]为dis[i] ,并视每条连接 u,v 的边 i 的边权 w’[i] 为 w[i]+h[u]-h[v] 。&lt;/p&gt;
-&lt;p&gt;由于对于任意两点 u,v ,有&lt;</summary>
-      
+    <summary type="html">我非要用Dijkstra</summary>
     
     
     
@@ -49,16 +42,12 @@
     <link href="http://abcdhhhh.github.io/2021/02/15/%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/"/>
     <id>http://abcdhhhh.github.io/2021/02/15/%E5%8D%9A%E5%BC%88%E6%A8%A1%E5%9E%8B/</id>
     <published>2021-02-15T11:55:30.000Z</published>
-    <updated>2021-03-15T06:50:39.773Z</updated>
+    <updated>2021-03-15T06:58:54.027Z</updated>
     
     <content type="html"><![CDATA[<h4 id="nim-k游戏"><a href="#nim-k游戏" class="headerlink" title="nim-k游戏"></a>nim-k游戏</h4><p>有n堆石子，每次可以从至多k堆中拿走任意数量的石子。（可以每堆拿的不一样）</p><p>不能拿的输。</p><p>先手必胜条件：把n堆石子用二进制表示，统计每一位上面的1的个数，如果每一位1的个数 mod (k+1)全为0，则先手必败。否则先手必胜。</p><p>证明：类比一堆石子共n个，每次去1~m个，不能动为输。</p><p>（比较显然，考虑不全是0的时候，从高位到低位取成0，如果这位的数比之前少，那么可以在前面不全去完，而是剩一些，在这里加个1之类的，比之前多就把新的弄小</p><h4 id="二分图博弈"><a href="#二分图博弈" class="headerlink" title="二分图博弈"></a>二分图博弈</h4><p>给一张二分图和一个起点，轮流在上面走，不能走重复的点，不能走就输。</p><p>先手必败当且仅当存在一个最大匹配使得起点不在这个匹配里面。（去掉起点跑最大匹配，加回来再跑一次，增广了就是先手败）</p><p>结论可以扩展到一般图上面，结论不变。</p><p>二分图证明：因为是二分图，停在起点一边就是先手败，否则后手败。</p><p>如果起点可以不在最大匹配：先手随便走，后手按照匹配边走。这样不可能停在另一边，否则就是一条增广路。</p><p>如果起点必须在最大匹配：先手按照固定的一个最大匹配走，随便后手怎么走，最后如果是停在先手一边，说明是$k$条匹配边，$k$条非匹配边，并且终点一定是一个非匹配点，否则先手还能走。异或一下就是一个不包括起点的最大匹配。</p><p>这个证明也适用于一般图。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h4 id=&quot;nim-k游戏&quot;&gt;&lt;a href=&quot;#nim-k游戏&quot; class=&quot;headerlink&quot; title=&quot;nim-k游戏&quot;&gt;&lt;/a&gt;nim-k游戏&lt;/h4&gt;&lt;p&gt;有n堆石子，每次可以从至多k堆中拿走任意数量的石子。（可以每堆拿的不一样）&lt;/p&gt;
-&lt;p&gt;不能拿的输</summary>
-      
+    <summary type="html">你会玩吗？</summary>
     
     
     
@@ -95,15 +84,12 @@
     <link href="http://abcdhhhh.github.io/2021/02/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%B8%AD%E7%9A%84extend%E6%93%8D%E4%BD%9C/"/>
     <id>http://abcdhhhh.github.io/2021/02/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%B8%AD%E7%9A%84extend%E6%93%8D%E4%BD%9C/</id>
     <published>2021-02-01T07:40:54.000Z</published>
-    <updated>2021-02-02T13:23:48.545Z</updated>
+    <updated>2021-03-15T07:00:36.875Z</updated>
     
     <content type="html"><![CDATA[<p>后缀自动机extend操作的代码如下。每次插入，会新建1~2个节点。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">extend</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> cur = sz++; <span class="comment">// new state</span></span><br><span class="line">st[cur].init();</span><br><span class="line">st[cur].len = st[last].len + <span class="number">1</span>; <span class="comment">// length</span></span><br><span class="line"><span class="keyword">int</span> p = last;</span><br><span class="line"><span class="keyword">while</span>(p != <span class="number">-1</span> &amp;&amp; st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] = cur;</span><br><span class="line">p = st[p].link;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(p == <span class="number">-1</span>) &#123;</span><br><span class="line">st[cur].link = <span class="number">0</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">int</span> q = st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(st[p].len + <span class="number">1</span> == st[q].len) &#123; <span class="comment">// no other state</span></span><br><span class="line">st[cur].link = q;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line"><span class="keyword">int</span> clone = sz++;</span><br><span class="line">st[clone].len = st[p].len + <span class="number">1</span>;</span><br><span class="line">st[clone].link = st[q].link;</span><br><span class="line">rep(i, <span class="number">0</span>, <span class="number">25</span>) st[clone].nxt[i] = st[q].nxt[i];</span><br><span class="line"><span class="keyword">while</span>(p != <span class="number">-1</span> &amp;&amp; st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] == q)&#123;</span><br><span class="line">st[p].nxt[c - <span class="string">&#x27;a&#x27;</span>] = clone; <span class="comment">// transfer</span></span><br><span class="line">p = st[p].link;</span><br><span class="line">&#125;</span><br><span class="line">st[q].link = st[cur].link = clone;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">last = cur;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>下面将用一些实例具体说明。</p><p>（定义“等价后缀”为在串中出现（末）位置集合完全相同的后缀。）</p><p>例1：$s=”a”+”b”$</p><pre class="mermaid">graph LR;0((t0));style 0 fill:#f55, stroke:#5f5,stroke-width:2px;1((a));style 1 fill:#fff, stroke:#5f5,stroke-width:2px;2((ab));style 2 fill:#f55;0--a-->1;1-.->0;1--b-->2;linkStyle 2 stroke:#5f5,stroke-width:2px;0--b-->2;linkStyle 3 stroke:#5f5,stroke-width:2px;2-.->0;linkStyle 4 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;</pre><p>没有非等价后缀。</p><p>例2：$s=”ab”+”a”$</p><pre class="mermaid">graph LR;0((t0));style 0 fill:#f55, stroke:#5f5,stroke-width:2px;1((a));style 1 fill:#f55;2((ab));style 2 fill:#fff, stroke:#5f5,stroke-width:2px;3((aba));style 3 fill:#f55;0--a-->1;1-.->0;1--b-->2;0--b-->2;2-.->0;2--a-->3;linkStyle 5 stroke:#5f5,stroke-width:2px;linkStyle 0 stroke:#55f,stroke-width:2px;3-.->1;linkStyle 6 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;</pre><p>前一个非等价后缀是”a”。</p><p>例3：$s=”ab”+”b”$</p><pre class="mermaid">graph LR;0((t0));style 0 fill:#f55, stroke:#5f5,stroke-width:2px;1((a));style 1 fill:#fff;2((ab));style 2 fill:#fff, stroke:#5f5,stroke-width:2px;3((abb));style 3 fill:#f55;0--a-->1;1-.->0;1--b-->2;0--"b(deleted)"-->2;2-."(deleted)".->0;2--b-->3;linkStyle 5 stroke:#5f5,stroke-width:2px;4((b));style 4 fill:#f55;4--b-->3;linkStyle 6 stroke:#d6d,stroke-width:2px;0--b-->4;linkStyle 7 stroke:#d6d,stroke-width:2px;3-.->4;linkStyle 8 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;4-.->0;linkStyle 9 stroke:#f55,stroke-width:2px,stroke-dasharray:5,5;2-.->4;linkStyle 10 stroke:#d6d,stroke-width:2px,stroke-dasharray:5,5;</pre><p>前一个非等价后缀是”b”，但”b”在原先表示”ab”的节点上，因此还需要把”b”状态分离一份出来，作为”ab”和”abb”的前一个非等价后缀。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;后缀自动机extend操作的代码如下。每次插入，会新建1~2个节点。&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;sp</summary>
-      
+    <summary type="html">状态冲突与调解</summary>
     
     
     
