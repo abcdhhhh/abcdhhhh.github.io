@@ -280,13 +280,18 @@
     <footer class="post-footer">
 
         
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
 
           <div class="post-nav">
             <div class="post-nav-item">
             </div>
             <div class="post-nav-item">
-                <a href="/2021/01/29/ML%E7%AC%94%E8%AE%B0/" rel="next" title="ML笔记">
-                  ML笔记 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/01/29/%E5%9B%BE%E7%9A%84%E8%AE%A1%E6%95%B0/" rel="next" title="图的计数">
+                  图的计数 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -347,6 +352,26 @@
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 30714,
+      el    : 'wpac-rating',
+      color : '#fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
 
 
 
