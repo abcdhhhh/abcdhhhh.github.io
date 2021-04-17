@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/ML笔记.assets/image-20210214094906957.png">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-04-17T13:43:37.546Z">
+<meta property="article:modified_time" content="2021-04-17T13:53:25.909Z">
 <meta property="article:author" content="abcdhhhh">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/ML笔记.assets/image-20210214094906957.png">
@@ -239,7 +239,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-17 21:43:37" itemprop="dateModified" datetime="2021-04-17T21:43:37+08:00">2021-04-17</time>
+        <time title="Modified: 2021-04-17 21:53:25" itemprop="dateModified" datetime="2021-04-17T21:53:25+08:00">2021-04-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,9 +290,9 @@ ts-->la-->h;
 <p>（若$X^TX$不可逆，可能是feature过多）</p>
 <h1 id="二分类问题——logistic回归"><a href="#二分类问题——logistic回归" class="headerlink" title="二分类问题——logistic回归"></a>二分类问题——logistic回归</h1><p>sigmoid函数：$g(z)=\frac{1}{1+e^{-z}}$。<br>hypothesis函数：$h_\theta (x)=g(\theta^Tx)=\frac{1}{1+e^{-\theta^Tx}}=P(y=1|x;\theta)$。</p>
 <p>决策函数：$y=[h_\theta(x)&gt;0.5]$<br>决策边界： $h_\theta(x)=0.5$，即$\theta^Tx=0$。</p>
-<p>cost函数：$\text{Cost}(h_\theta(x),y)=\begin{cases}-\log(h_\theta(x))&amp;y=1\-\log(1-h_\theta(x))&amp; y=0\end{cases}\\=-y\log(h_\theta(x))-(1-y)\log(1-h_\theta(x))$</p>
-<p>总cost函数：$J(\theta)=\text{meanCost}(h_\theta(x),y)\\=-\text{mean}(y\log(h)+(1-y)\log(1-h))\\=\text{mean}(y\log(1+e^{-\theta^Tx})+(1-y)\log(1+e^{\theta^Tx}))$</p>
-<h2 id="梯度下降法-1"><a href="#梯度下降法-1" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>不断迭代：$\theta :=\theta-\alpha \nabla J(\theta)$<br>其中：</p>
+<p>cost函数：</p>
+<script type="math/tex; mode=display">\text{Cost}(h_\theta(x),y)=\begin{cases}-\log(h_\theta(x))&y=1\\-\log(1-h_\theta(x))& y=0\end{cases}\\=-y\log(h_\theta(x))-(1-y)\log(1-h_\theta(x))</script><p>总cost函数：</p>
+<script type="math/tex; mode=display">J(\theta)=\text{meanCost}(h_\theta(x),y)\\=-\text{mean}(y\log(h)+(1-y)\log(1-h))\\=\text{mean}(y\log(1+e^{-\theta^Tx})+(1-y)\log(1+e^{\theta^Tx}))</script><h2 id="梯度下降法-1"><a href="#梯度下降法-1" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>不断迭代：$\theta :=\theta-\alpha \nabla J(\theta)$<br>其中：</p>
 <ul>
 <li>$\nabla J(\theta)=\text{mean}(x(h-y))$为梯度</li>
 </ul>
@@ -345,7 +345,7 @@ ts-->la-->h;
 <p>$\min_\theta C\sum(y \text{cost}_1(\theta^Tx)+(1-y)\text{cost}_0(\theta^Tx))+\frac{1}{2}||\theta||^2$</p>
 <p>其中$C=\frac{1}{\lambda}$</p>
 <p><img src="ML笔记.assets/image-20210214094906957.png" alt="image-20210214094906957"></p>
-<p>当$\begin{cases}\theta^Tx\ge 1&amp;h=1\\\theta^Tx\le -1&amp;h=0\end{cases}$时，$y \text{cost}_1(\theta^Tx)+(1-y)\text{cost}_0(\theta^Tx)=0$。</p>
+<p>当 $\begin{cases}\theta^Tx\ge 1&amp;h=1\\\theta^Tx\le -1&amp;h=0\end{cases}$时，$y \text{cost}_1(\theta^Tx)+(1-y)\text{cost}_0(\theta^Tx)=0$。</p>
 <h2 id="tip-Gaussian-kernal"><a href="#tip-Gaussian-kernal" class="headerlink" title="tip: Gaussian kernal"></a>tip: Gaussian kernal</h2><p>选取landmark $l$，利用<strong>正态分布</strong>曲线：</p>
 <p>$f=\exp(-\frac{||z-l||^2}{2\sigma^2})$</p>
 <div class="table-container">
