@@ -25,21 +25,20 @@
   </script>
 <meta name="description" content="举一反三的原理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="监督学习">
-<meta property="og:url" content="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="ML笔记">
+<meta property="og:url" content="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="举一反三的原理">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/监督学习.assets/image-20210214094906957.png">
+<meta property="og:image" content="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/监督学习.assets/image-20210214094906957.png">
 <meta property="article:published_time" content="2021-01-29T14:45:43.000Z">
-<meta property="article:modified_time" content="2021-02-23T12:01:31.338Z">
+<meta property="article:modified_time" content="2021-04-17T13:06:07.164Z">
 <meta property="article:author" content="abcdhhhh">
-<meta property="article:tag" content="回归分析">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/监督学习.assets/image-20210214094906957.png">
+<meta name="twitter:image" content="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/监督学习.assets/image-20210214094906957.png">
 
 
-<link rel="canonical" href="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/">
 
 
 <script class="page-configurations">
@@ -51,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>监督学习 | Hexo</title>
+<title>ML笔记 | Hexo</title>
   
 
 
@@ -151,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">训练集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">标准化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">3.</span> <span class="nav-text">回归问题——线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%96%B9%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">一般方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94logistic%E5%9B%9E%E5%BD%92"><span class="nav-number">4.</span> <span class="nav-text">二分类问题——logistic回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-1"><span class="nav-number">4.1.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">4.1.1.</span> <span class="nav-text">随机梯度下降法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-learning"><span class="nav-number">4.1.2.</span> <span class="nav-text">online learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">正则化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overfit%E4%B8%8Eunderfit"><span class="nav-number">4.3.</span> <span class="nav-text">overfit与underfit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">5.</span> <span class="nav-text">神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadamard%E7%A7%AF"><span class="nav-number">5.1.</span> <span class="nav-text">Hadamard积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">反向传播算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">支持向量机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-Gaussian-kernal"><span class="nav-number">6.1.</span> <span class="nav-text">tip: Gaussian kernal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E6%89%A9%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%A7%84%E6%A8%A1"><span class="nav-number">6.2.</span> <span class="nav-text">tip: 扩大数据规模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-map-reduce"><span class="nav-number">6.3.</span> <span class="nav-text">tip: map reduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E4%B8%8A%E9%99%90%E5%88%86%E6%9E%90"><span class="nav-number">6.4.</span> <span class="nav-text">tip: 上限分析</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E9%9B%86"><span class="nav-number">2.</span> <span class="nav-text">训练集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">标准化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-number">3.</span> <span class="nav-text">回归问题——线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%96%B9%E7%A8%8B"><span class="nav-number">3.2.</span> <span class="nav-text">一般方程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E2%80%94%E2%80%94logistic%E5%9B%9E%E5%BD%92"><span class="nav-number">4.</span> <span class="nav-text">二分类问题——logistic回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95-1"><span class="nav-number">4.1.</span> <span class="nav-text">梯度下降法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95"><span class="nav-number">4.1.1.</span> <span class="nav-text">随机梯度下降法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#online-learning"><span class="nav-number">4.1.2.</span> <span class="nav-text">online learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">正则化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#overfit%E4%B8%8Eunderfit"><span class="nav-number">4.3.</span> <span class="nav-text">overfit与underfit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">5.</span> <span class="nav-text">神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hadamard%E7%A7%AF"><span class="nav-number">5.1.</span> <span class="nav-text">Hadamard积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">反向传播算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">支持向量机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-Gaussian-kernal"><span class="nav-number">6.1.</span> <span class="nav-text">tip: Gaussian kernal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E6%89%A9%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%A7%84%E6%A8%A1"><span class="nav-number">6.2.</span> <span class="nav-text">tip: 扩大数据规模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-map-reduce"><span class="nav-number">6.3.</span> <span class="nav-text">tip: map reduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tip-%E4%B8%8A%E9%99%90%E5%88%86%E6%9E%90"><span class="nav-number">6.4.</span> <span class="nav-text">tip: 上限分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%9A%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">聚类问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#K-means%E7%AE%97%E6%B3%95"><span class="nav-number">7.1.</span> <span class="nav-text">K-means算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9"><span class="nav-number">8.</span> <span class="nav-text">数据压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PCA"><span class="nav-number">8.1.</span> <span class="nav-text">PCA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B"><span class="nav-number">9.</span> <span class="nav-text">异常检测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">9.1.</span> <span class="nav-text">正态分布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F"><span class="nav-number">10.</span> <span class="nav-text">推荐系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4"><span class="nav-number">10.1.</span> <span class="nav-text">协同过滤</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -164,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -172,10 +171,6 @@
             <a href="/categories/">
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
@@ -213,7 +208,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/01/29/ML%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -226,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          监督学习
+          ML笔记
         </h1>
 
         <div class="post-meta-container">
@@ -244,7 +239,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-23 20:01:31" itemprop="dateModified" datetime="2021-02-23T20:01:31+08:00">2021-02-23</time>
+        <time title="Modified: 2021-04-17 21:06:07" itemprop="dateModified" datetime="2021-04-17T21:06:07+08:00">2021-04-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -252,12 +247,12 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+          <a href="/categories/ML/" itemprop="url" rel="index"><span itemprop="name">ML</span></a>
         </span>
     </span>
 
   
-    <span id="/2021/01/29/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" class="post-meta-item leancloud_visitors" data-flag-title="监督学习" title="Views">
+    <span id="/2021/01/29/ML%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="ML笔记" title="Views">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -397,6 +392,58 @@ ts-->la-->h;
 <h2 id="tip-扩大数据规模"><a href="#tip-扩大数据规模" class="headerlink" title="tip: 扩大数据规模"></a>tip: 扩大数据规模</h2><p>在原数据上增加干扰</p>
 <h2 id="tip-map-reduce"><a href="#tip-map-reduce" class="headerlink" title="tip: map reduce"></a>tip: map reduce</h2><p>把训练集分给多台计算机并行计算。</p>
 <h2 id="tip-上限分析"><a href="#tip-上限分析" class="headerlink" title="tip: 上限分析"></a>tip: 上限分析</h2><p>分析机器学习流水线各阶段准确率上限，从而避免无用功</p>
+<h1 id="聚类问题"><a href="#聚类问题" class="headerlink" title="聚类问题"></a>聚类问题</h1><p>将训练集分成多个团</p>
+<h2 id="K-means算法"><a href="#K-means算法" class="headerlink" title="K-means算法"></a>K-means算法</h2><ol>
+<li>随机初始化$K$个质心$\mu_1,\mu_2,…,\mu_K$（可以随机取$K$个训练数据）</li>
+<li>找出每个点最近的质心$\mu_{c^{(i)}}$，并将质心更新为其关联点的均值。不断迭代。</li>
+</ol>
+<p>optimization objective: $J(c,\mu)=\text{mean}(||x^{(i)}-\mu_{c^{(i)}}||^2)$</p>
+<p>可能会取局部极小值，因此需多次实验</p>
+<p>全局最小值随$K$递减</p>
+<h1 id="数据压缩"><a href="#数据压缩" class="headerlink" title="数据压缩"></a>数据压缩</h1><p>把$n$维数据集$X=\{x_1,x_2,…,x_m\}\in R^{n\times m}$</p>
+<p>降到$k$维$Y\in R^{k\times m}$</p>
+<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><ol>
+<li>feature scaling，去中心化</li>
+<li>求出协方差矩阵$\Sigma=\frac{1}{m}XX^T$，进行特征值分解$\Sigma=U^T\Lambda U$</li>
+<li>取$U$前$k$列，组成$P\in R^{n\times k}$</li>
+<li>$Y=P^TX$，$X_{approx}=PY$</li>
+</ol>
+<p>choice of $k$ :  $\frac{\sum_{i=1}^k\lambda_i}{\sum_{i=1}^n\lambda_i}\ge 0.99$</p>
+<p>可以减小数据规模、方便可视化</p>
+<p>不推荐用来处理overfit（更推荐正则化）</p>
+<h1 id="异常检测"><a href="#异常检测" class="headerlink" title="异常检测"></a>异常检测</h1><p>根据训练集，确定数据的异常程度</p>
+<h2 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h2><p>训练集$X=\{x_1,x_2,…,x_m\}\in R^{n\times m}$</p>
+<p>一维：$p(x;\mu,\sigma)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$。</p>
+<p>$p(x)=\prod_{i=1}^n p(x_i;\mu_i,\sigma_i)$。</p>
+<p>$n$维：$p(x;\mu,\sigma)=\frac{1}{(2\pi)^{\frac{n}{2}}|\Sigma|^{\frac{1}{2}}}\exp(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu))$，其中$\Sigma$为协方差矩阵。（要求$m&gt;n$，否则$\Sigma$不可逆）</p>
+<p>决策函数：$y=[p(x)\le \varepsilon]$</p>
+<p>评价依据：F1分数（精准率和召回率的调和平均数）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>异常检测</th>
+<th>监督学习</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>少量异常样本，大量正常样本</td>
+<td>正常、异常样本数目接近</td>
+</tr>
+<tr>
+<td>异常样本缺乏共性</td>
+<td>异常样本有共性</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="推荐系统"><a href="#推荐系统" class="headerlink" title="推荐系统"></a>推荐系统</h1><p>$n_u$个用户，$n_m$部电影，用户$j$对电影$i$的评分为$y(i,j)$，有缺失。</p>
+<h2 id="协同过滤"><a href="#协同过滤" class="headerlink" title="协同过滤"></a>协同过滤</h2><p>电影$i$有特征$x^{(i)}$，用户$j$有偏好$\theta^{(j)}$。</p>
+<p>先随机初始化$X$和$\Theta$。</p>
+<p>然后梯度下降，目标函数$J(X,\Theta)=\frac{1}{2}||X\Theta^T-Y||^2+\frac{\lambda}{2}||X||^2+\frac{\lambda}{2}||\Theta||^2$。</p>
+<p>对缺失的$y(i,j)$，可补齐缺失评分$y(i,j)=\theta^{(j)T}x^{(i)}$。</p>
+<p>推荐时，选择缺失评分较高的几个电影。</p>
 
     </div>
 
@@ -405,9 +452,6 @@ ts-->la-->h;
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/" rel="tag"># 回归分析</a>
-          </div>
 
         
 

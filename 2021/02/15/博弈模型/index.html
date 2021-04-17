@@ -31,9 +31,8 @@
 <meta property="og:description" content="你会玩吗？">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-15T11:55:30.000Z">
-<meta property="article:modified_time" content="2021-03-15T06:58:54.027Z">
+<meta property="article:modified_time" content="2021-04-17T13:29:00.874Z">
 <meta property="article:author" content="abcdhhhh">
-<meta property="article:tag" content="博弈论">
 <meta name="twitter:card" content="summary">
 
 
@@ -149,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#nim-k%E6%B8%B8%E6%88%8F"><span class="nav-number">1.</span> <span class="nav-text">nim-k游戏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8D%9A%E5%BC%88"><span class="nav-number">2.</span> <span class="nav-text">二分图博弈</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Fibonacci%E5%8D%9A%E5%BC%88"><span class="nav-number">1.</span> <span class="nav-text">Fibonacci博弈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wythoff%E5%8D%9A%E5%BC%88"><span class="nav-number">2.</span> <span class="nav-text">Wythoff博弈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nim-k%E6%B8%B8%E6%88%8F"><span class="nav-number">3.</span> <span class="nav-text">nim-k游戏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E5%9B%BE%E5%8D%9A%E5%BC%88"><span class="nav-number">4.</span> <span class="nav-text">二分图博弈</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -162,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -170,10 +169,6 @@
             <a href="/categories/">
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
@@ -242,7 +237,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-15 14:58:54" itemprop="dateModified" datetime="2021-03-15T14:58:54+08:00">2021-03-15</time>
+        <time title="Modified: 2021-04-17 21:29:00" itemprop="dateModified" datetime="2021-04-17T21:29:00+08:00">2021-04-17</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -272,7 +267,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="nim-k游戏"><a href="#nim-k游戏" class="headerlink" title="nim-k游戏"></a>nim-k游戏</h4><p>有n堆石子，每次可以从至多k堆中拿走任意数量的石子。（可以每堆拿的不一样）</p>
+        <h4 id="Fibonacci博弈"><a href="#Fibonacci博弈" class="headerlink" title="Fibonacci博弈"></a>Fibonacci博弈</h4><p>一堆$n$个石子，两人轮流取，每次最少取1个，最多不超过对手刚取的个数的2倍（第一次无限制，但不能取完）。取完获胜。</p>
+<p>先手必败当且仅当$n$为Fibonacci数。</p>
+<h4 id="Wythoff博弈"><a href="#Wythoff博弈" class="headerlink" title="Wythoff博弈"></a>Wythoff博弈</h4><p>两堆各若干个石子，两人轮流从一堆中取任意个或从两堆中取同样多个。每次至少取1个，取光者胜利。</p>
+<p>定义后手必胜的局面为奇异局势。</p>
+<p>从小到大依次为 $(0,0), (1,2), (3,5), …$</p>
+<p>（可以考虑方格纸上，从左下角依次放点，每个点可以向上、右、右上方向发出射线）</p>
+<p>设第$k$个局面为$(a_k,b_k)$，则$a_k-a_{k-1}=k, b_k=[\frac{1+\sqrt{5}}{2}a_k]$</p>
+<h4 id="nim-k游戏"><a href="#nim-k游戏" class="headerlink" title="nim-k游戏"></a>nim-k游戏</h4><p>有n堆石子，每次可以从至多k堆中拿走任意数量的石子。（可以每堆拿的不一样）</p>
 <p>不能拿的输。</p>
 <p>先手必胜条件：把n堆石子用二进制表示，统计每一位上面的1的个数，如果每一位1的个数 mod (k+1)全为0，则先手必败。否则先手必胜。</p>
 <p>证明：类比一堆石子共n个，每次去1~m个，不能动为输。</p>
@@ -292,16 +294,13 @@
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E5%8D%9A%E5%BC%88%E8%AE%BA/" rel="tag"># 博弈论</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/02/15/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" rel="prev" title="无监督学习">
-                  <i class="fa fa-chevron-left"></i> 无监督学习
+                <a href="/2021/02/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E4%B8%AD%E7%9A%84extend%E6%93%8D%E4%BD%9C/" rel="prev" title="后缀自动机中的extend操作">
+                  <i class="fa fa-chevron-left"></i> 后缀自动机中的extend操作
                 </a>
             </div>
             <div class="post-nav-item">
