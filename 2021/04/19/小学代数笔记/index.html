@@ -23,16 +23,17 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="小学代数常见群    符号 名称 备注     $S_n$ 对称群    $A_n$ 交错群 $S_n$中所有偶置换   $K_4$ Klein4元群 $Z_2\times Z_2$   $D_{2n}$ 二面体群 $&lt;x,y\ x^n&#x3D;y^2&#x3D;1,xyx&#x3D;y&gt;$   $GL_n$ 一般线性群 $n\times n$可逆矩阵   $SL_n$ 特殊线性群 行列式为1   $O_n$ 正">
+<meta name="description" content="你怎么这么菜，连小学的东西都学不会">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小学代数笔记">
 <meta property="og:url" content="http://abcdhhhh.github.io/2021/04/19/%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="小学代数常见群    符号 名称 备注     $S_n$ 对称群    $A_n$ 交错群 $S_n$中所有偶置换   $K_4$ Klein4元群 $Z_2\times Z_2$   $D_{2n}$ 二面体群 $&lt;x,y\ x^n&#x3D;y^2&#x3D;1,xyx&#x3D;y&gt;$   $GL_n$ 一般线性群 $n\times n$可逆矩阵   $SL_n$ 特殊线性群 行列式为1   $O_n$ 正">
+<meta property="og:site_name" content="Fish Port">
+<meta property="og:description" content="你怎么这么菜，连小学的东西都学不会">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-19T11:07:19.000Z">
-<meta property="article:modified_time" content="2021-04-19T11:09:09.462Z">
+<meta property="article:modified_time" content="2021-04-20T07:58:54.349Z">
 <meta property="article:author" content="abcdhhhh">
+<meta property="article:tag" content="Fish-touching">
 <meta name="twitter:card" content="summary">
 
 
@@ -48,7 +49,7 @@
     lang   : 'en'
   };
 </script>
-<title>小学代数笔记 | Hexo</title>
+<title>小学代数笔记 | Fish Port</title>
   
 
 
@@ -89,7 +90,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Fish Port" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -107,7 +108,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Fish Port</h1>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -148,14 +149,14 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">小学代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BE%A4"><span class="nav-number">1.1.</span> <span class="nav-text">常见群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%80%81"><span class="nav-number">1.2.</span> <span class="nav-text">同态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%80%81%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.3.</span> <span class="nav-text">同态基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%90%8C%E6%9E%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.4.</span> <span class="nav-text">第一同构基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E5%90%8C%E6%9E%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">第二同构基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%A4%E4%BD%9C%E7%94%A8"><span class="nav-number">1.6.</span> <span class="nav-text">群作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%A8%E9%81%93"><span class="nav-number">1.7.</span> <span class="nav-text">轨道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%B3%E5%AE%9A%E5%8C%96%E5%AD%90"><span class="nav-number">1.8.</span> <span class="nav-text">稳定化子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%86%E9%9B%86"><span class="nav-number">1.9.</span> <span class="nav-text">商集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="nav-number">1.10.</span> <span class="nav-text">类方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Burnside%E5%BC%95%E7%90%86"><span class="nav-number">1.11.</span> <span class="nav-text">Burnside引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polya%E5%AE%9A%E7%90%86"><span class="nav-number">1.12.</span> <span class="nav-text">Polya定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cauchy%E5%BC%95%E7%90%86"><span class="nav-number">1.13.</span> <span class="nav-text">Cauchy引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sylow%E7%AC%AC%E4%B8%80%E5%AE%9A%E7%90%86"><span class="nav-number">1.14.</span> <span class="nav-text">Sylow第一定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%90%86"><span class="nav-number">1.14.1.</span> <span class="nav-text">引理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sylow%E7%AC%AC%E4%BA%8C%E5%AE%9A%E7%90%86"><span class="nav-number">1.15.</span> <span class="nav-text">Sylow第二定理</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">小学代数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%BE%A4"><span class="nav-number">1.1.</span> <span class="nav-text">常见群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8A%E7%9B%B4%E7%A7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">半直积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%80%81"><span class="nav-number">1.3.</span> <span class="nav-text">同态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%80%81%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.4.</span> <span class="nav-text">同态基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%90%8C%E6%9E%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">第一同构基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E5%90%8C%E6%9E%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.6.</span> <span class="nav-text">第二同构基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%A4%E4%BD%9C%E7%94%A8"><span class="nav-number">1.7.</span> <span class="nav-text">群作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%A8%E9%81%93"><span class="nav-number">1.8.</span> <span class="nav-text">轨道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%B3%E5%AE%9A%E5%8C%96%E5%AD%90"><span class="nav-number">1.9.</span> <span class="nav-text">稳定化子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%86%E9%9B%86"><span class="nav-number">1.10.</span> <span class="nav-text">商集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E7%A8%8B"><span class="nav-number">1.11.</span> <span class="nav-text">类方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Burnside%E5%BC%95%E7%90%86"><span class="nav-number">1.12.</span> <span class="nav-text">Burnside引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polya%E5%AE%9A%E7%90%86"><span class="nav-number">1.13.</span> <span class="nav-text">Polya定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cauchy%E5%BC%95%E7%90%86"><span class="nav-number">1.14.</span> <span class="nav-text">Cauchy引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sylow%E7%AC%AC%E4%B8%80%E5%AE%9A%E7%90%86"><span class="nav-number">1.15.</span> <span class="nav-text">Sylow第一定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%90%86"><span class="nav-number">1.15.1.</span> <span class="nav-text">引理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sylow%E7%AC%AC%E4%BA%8C%E5%AE%9A%E7%90%86"><span class="nav-number">1.16.</span> <span class="nav-text">Sylow第二定理</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">abcdhhhh</p>
-  <div class="site-description" itemprop="description">This is my personal blog.</div>
+  <div class="site-description" itemprop="description">Striving to Build a Paradise for Touching Fish</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
@@ -211,11 +212,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="abcdhhhh">
-      <meta itemprop="description" content="This is my personal blog.">
+      <meta itemprop="description" content="Striving to Build a Paradise for Touching Fish">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Fish Port">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -229,10 +230,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-04-19 19:07:19 / Modified: 19:09:09" itemprop="dateCreated datePublished" datetime="2021-04-19T19:07:19+08:00">2021-04-19</time>
+      <time title="Created: 2021-04-19 19:07:19" itemprop="dateCreated datePublished" datetime="2021-04-19T19:07:19+08:00">2021-04-19</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-20 15:58:54" itemprop="dateModified" datetime="2021-04-20T15:58:54+08:00">2021-04-20</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -253,6 +260,7 @@
     </span>
 </div>
 
+            <div class="post-description">你怎么这么菜，连小学的东西都学不会</div>
         </div>
       </header>
 
@@ -324,6 +332,8 @@
 </tbody>
 </table>
 </div>
+<h2 id="半直积"><a href="#半直积" class="headerlink" title="半直积"></a>半直积</h2><p>若 $N\unlhd G, H\le G$，$G=NH, N\cap H=\{1\}$</p>
+<p>则 $G$ 为 $N$ 和 $H$ 的半直积。记作 $G=N\rtimes H$。</p>
 <h2 id="同态"><a href="#同态" class="headerlink" title="同态"></a>同态</h2><p>若$\varphi: M\to M’$满足：</p>
 <script type="math/tex; mode=display">\forall a,b\in M, \varphi(ab)=\varphi(a)\varphi(b)</script><p>则$\varphi$是$M$到$M’$的同态。记作$M\sim M’$。</p>
 <blockquote>
@@ -379,23 +389,23 @@
 <p>参考： <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/358852225">https://zhuanlan.zhihu.com/p/358852225</a></p>
 </blockquote>
 <ul>
-<li>若$p$为素数，$G$为群，$p^k||G|$，则$G$必含$p^k$阶子群。</li>
+<li>若$p$为素数，$G$为群，$p^k\mid |G|$，则$G$必含$p^k$阶子群。</li>
 </ul>
 <blockquote>
-<p>证明：<br>根据类方程，$|G|=|C|+\sum [G:C(y_i)]$。<br>若$p\nmid |C|$，则$\exists y_i, p\nmid [G:C(y_i)]$。<br>而$|G|=|C(y_i)|[G:C(y_i)]$，因此$p^k\mid |C(y_i)|$，满足要求。<br>若$p||C|$，由Cauchy引理，$\exists a\in C, o(a)=p$。<br>考虑$G/<a>$，$p^{k-1}||G/<a>|$。<br>由归纳假设，$|G/<a>|$有$p^{k-1}$阶子群$\bar{H}$。<br>$\therefore \exists H\le G, |H|=|H/<a>||<a>|=|H|$。</p>
+<p>证明：<br>$|G|=|C|+\sum [G:C(y_i)]$<br>若$p\nmid |C|$，则$\exists y_i, p\nmid [G:C(y_i)]$<br>而$|G|=|C(y_i)|[G:C(y_i)]$，因此$p^k\mid |C(y_i)|$，满足要求。<br>若$p\mid |C|$，由Cauchy引理，$\exists a\in C, o(a)=p$。<br>考虑$G/<a>$，$p^{k-1}\mid |G/<a>|$。<br>由归纳假设，$|G/<a>|$有$p^{k-1}$阶子群$\bar{H}$。<br>$\therefore \exists H\le G, H/<a>=\bar{H}$<br>$\therefore |H|=|H/<a>||<a>|=p^k$</p>
 <p>若$p^{k+1}\nmid |G|$，称$p^k$阶子群为Sylow-$p$子群。</p>
 </blockquote>
 <h3 id="引理"><a href="#引理" class="headerlink" title="引理"></a>引理</h3><ul>
 <li>若$P$为$G$的Sylow-$p$子群，$H\le N(P), |H|=p^j$，则$H\subseteq P$。</li>
 </ul>
 <blockquote>
-<p>证明：<br>$H\le N(P)$<br>$P\trianglelefteq N(P)$<br>$\therefore HP=PH\le N(P)$<br>$\therefore HP/P\cong H/(H\cap P)$<br>$|HP/P|=p^k, k\le j$<br>$|HP|=|P|\cdot p^k$<br>$\therefore k=0$<br>$\therefore HP=P$<br>$\therefore H\subseteq P$</p>
+<p>证明：<br>$H\le N(P)$<br>$P\trianglelefteq N(P)$<br>$\therefore HP=PH\le N(P)$<br>$\therefore HP/P\cong H/(H\cap P)$<br>$\therefore |HP/P|=p^k, k\le j$<br>$\therefore |HP|=|P|\cdot p^k$<br>$\therefore k=0$<br>$\therefore HP=P$<br>$\therefore H\subseteq P$</p>
 <h2 id="Sylow第二定理"><a href="#Sylow第二定理" class="headerlink" title="Sylow第二定理"></a>Sylow第二定理</h2><ol>
 <li>$G$的Sylow-$p$子群两两共轭</li>
-<li>$G$的Sylow-$p$子群个数是$[G:H]$的因子，$H$是任意的Sylow-$p$子群，且Sylow-$p$子群个数模$p$余1。</li>
+<li>$G$的Sylow-$p$子群个数是$[G:H]$的因子，且模$p$余1，$H$是任一Sylow-$p$子群。</li>
 <li>$G$的任意$p^k$子群均包含于一个Sylow-$p$子群。</li>
 </ol>
-<p>证明：<br>取$\pi$为$G$的Sylow-$p$子群组成的集合。<br>定义$g\cdot H=gHg^{-1}\in \pi$。</p>
+<p>证明：<br>令$\Pi$为$G$的Sylow-$p$子群组成的集合。<br>考虑 $G$ 在 $H$ 上的共轭作用。</p>
 </blockquote>
 
     </div>
