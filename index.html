@@ -308,7 +308,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Untitled</a>
+          <a href="/2021/04/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">数据库笔记</a>
         </h2>
 
         <div class="post-meta-container">
@@ -326,7 +326,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-27 16:53:13" itemprop="dateModified" datetime="2021-04-27T16:53:13+08:00">2021-04-27</time>
+        <time title="Modified: 2021-05-03 08:52:49" itemprop="dateModified" datetime="2021-05-03T08:52:49+08:00">2021-05-03</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -339,7 +339,7 @@
     </span>
 
   
-    <span id="/2021/04/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="" title="Views">
+    <span id="/2021/04/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="数据库笔记" title="Views">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -355,141 +355,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>存储介质按单位容量从昂贵到便宜，速度从快到慢排序：</p>
-<p>高速缓冲存储器&gt;主存储器&gt;快闪存储器&gt;磁盘存储器&gt;光学存储器&gt;磁带存储器</p>
-<h2 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h2><p>存储介质的发展：磁盘-&gt; 磁盘阵列-&gt; Flash</p>
-<p>数据管理技术发展阶段：</p>
-<ol>
-<li>人工管理</li>
-<li>文件系统<ol>
-<li>缺陷：不一致性、数据冗余、联系弱</li>
-</ol>
-</li>
-<li>数据库阶段</li>
-<li>高级数据库阶段</li>
-</ol>
-<p>数据描述：概念设计-&gt; 逻辑设计-&gt; 物理设计</p>
-<p>数据抽象：</p>
-<ol>
-<li>概念模型<ol>
-<li><strong>ER模型</strong></li>
-</ol>
-</li>
-<li>逻辑模型<ol>
-<li>层次模型：树</li>
-<li>网状模型：有向图</li>
-<li><strong>关系模型</strong>：二维表</li>
-<li>对象模型：嵌套、递归</li>
-</ol>
-</li>
-<li>外部模型：视图</li>
-<li>内部模型：物理模型</li>
-</ol>
-<p>三层模式：</p>
-<ol>
-<li>外模式：外部记录</li>
-<li>逻辑模式：数据的逻辑结构</li>
-<li>内模式：物理存储</li>
-</ol>
-<p>两级映像：外模式/逻辑模式、逻辑模式/内模式</p>
-<p>数据独立性：应用程序和数据库的数据结构之间相互独立</p>
-<p>DBMS：</p>
-<ol>
-<li>定义<ol>
-<li>DDL</li>
-</ol>
-</li>
-<li>操纵<ol>
-<li>DML</li>
-</ol>
-</li>
-<li>保护<ol>
-<li>恢复</li>
-<li>并发控制</li>
-<li>数据完整性控制</li>
-<li>数据安全性控制</li>
-</ol>
-</li>
-<li>维护<ol>
-<li>数据载入、转换、转储、数据库改组、性能监控……</li>
-</ol>
-</li>
-<li>数据字典<ol>
-<li>3层结构定义的数据库</li>
-</ol>
-</li>
-</ol>
-<p>DBS：数据库、硬件、软件、数据库管理员；集中式、客户机/服务器式、并行式、分布式</p>
-<h2 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h2><p>组成部分：数据结构、数据操纵、数据完整性规则</p>
-<p>数据操纵：关系运算（关系代数、关系演算、关系逻辑）、数据库操作</p>
-<p>数据完整性规则：实体完整性、参照完整性、用户定义的完整性</p>
-<p>3层体系结构：</p>
-<ol>
-<li>关系模式：记录类型</li>
-<li>子模式：用户用到的数据</li>
-<li>存储模式：散列方法、索引方法</li>
-</ol>
-<h2 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h2><p>基本操作：并、差、笛卡尔积、投影、选择（$\sigma_F(R)$）</p>
-<p>组合操作：交、连接（$\Join_{i\theta j}$）、自然连接、除法</p>
-<p>扩充操作：改名（ $\rho_{S(A_1,…,A_n)}(R)$ ）、广义投影（ $\pi_{F_1,F_2,…,F_n}(R)$ ）、赋值（$\gets$）、外部并、半连接（$\ltimes$）、聚集操作（max, min, avg, sum, count）</p>
-<h2 id="关系演算"><a href="#关系演算" class="headerlink" title="关系演算"></a>关系演算</h2><p>元组关系演算：元组表达式$\{t\mid P(t)\}$</p>
-<p>域关系演算：$\{t_1t_2…t_k\mid P(t_1,t_2,…,t_k)\}$</p>
-<p>$\text{DOM}(P(t))$ ：定义为 $P(t)$ 中常量和属性值组成的集合</p>
-<p>安全性条件：</p>
-<ol>
-<li>$t$ 中所有值来自$\text{DOM}(P)$</li>
-<li>$(\exists u)(P_1(u))$ ，若 $P_1(u) $ 为真，则 $u$ 每个分量是 $\text{DOM}(P)$ 的元素。</li>
-<li>$(\forall u)(P_1(u))$ ，若 $P_1(u) $ 为假，则 $u$ 每个分量是 $\text{DOM}(P)$ 的元素。</li>
-</ol>
-<p>表达式优化：</p>
-<p><img src="数据库笔记.assets/image-20210425173155443.png" alt="image-20210425173155443" style="zoom:50%;" /></p>
-<h2 id="关系逻辑"><a href="#关系逻辑" class="headerlink" title="关系逻辑"></a>关系逻辑</h2><p>成分：谓词（外延谓词、内涵谓词）、原子（关系原子、算术原子）、规则、查询</p>
-<p>规则的安全条件：出现在规则中任何地方的变量必须出现在某个<strong>非求反</strong>的关系子目标中</p>
-<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"># 创建模式</span><br><span class="line">create schema module_name authorization user_name;</span><br><span class="line"># 删除模式</span><br><span class="line">drop schema module_name cascade;</span><br><span class="line"># 创建表</span><br><span class="line">create table T(</span><br><span class="line">	&#96;T#&#96; char(4) not null,</span><br><span class="line">   	TNAME char(8) not null,</span><br><span class="line">    TITLE char(10),</span><br><span class="line">    primary key(&#96;T#&#96;)</span><br><span class="line">);</span><br><span class="line"># 删除表</span><br><span class="line">drop table T restrict;</span><br><span class="line"># 创建属性</span><br><span class="line">alter table T add ADDRESS char(30);</span><br><span class="line"># 删除属性</span><br><span class="line">alter table T drop TITLE cascade;</span><br><span class="line"># 修改属性类型</span><br><span class="line">alter table T modify TNAME char(6);</span><br><span class="line"># 索引</span><br><span class="line">create unique index &#96;SC_index&#96; on SC(&#96;S#&#96; asc, &#96;C#&#96; desc);</span><br><span class="line">drop index &#96;S#_index&#96;, &#96;SC_index&#96;;</span><br><span class="line"># 查询</span><br><span class="line">select username</span><br><span class="line">from account</span><br><span class="line">where username like &quot;_W\_%&quot;</span><br><span class="line"># 递归查询</span><br><span class="line">with recursive pre(&#96;C#&#96;,&#96;PC#&#96;) as(</span><br><span class="line">	(select &#96;C#&#96;,&#96;PC#&#96; from course)</span><br><span class="line">    union</span><br><span class="line">    (select course.&#96;C#&#96;,pre.&#96;PC#&#96;</span><br><span class="line">     from course, pre</span><br><span class="line">     where course.&#96;PC#&#96;&#x3D;pre.&#96;C#&#96;</span><br><span class="line">    )</span><br><span class="line">)</span><br><span class="line">select * from pre;</span><br><span class="line"># 插入</span><br><span class="line">insert into SC(&#96;S#&#96;,&#96;C#&#96;) values(&#39;S5&#39;,&#39;S8&#39;);</span><br><span class="line"># 删除</span><br><span class="line">delete from SC where &#96;C#&#96;&#x3D;&#39;C4&#39;;</span><br><span class="line"># 更新</span><br><span class="line">update C set CNAME&#x3D;&#39;DB&#39; where &#96;C#&#96;&#x3D;&#39;C5&#39;;</span><br><span class="line"># 创建视图</span><br><span class="line">create view student_score(&#96;S#&#96;,SNAME,CNAME,SCORE)</span><br><span class="line">as select S.&#96;S#&#96;,SNAME,CNAME,SCORE</span><br><span class="line">from S,SC,C</span><br><span class="line">where S.&#96;S#&#96;&#x3D;SC.&#96;S#&#96; and SC.&#96;C#&#96;&#x3D;C.&#96;C#&#96;;</span><br><span class="line"># 删除视图</span><br><span class="line">drop view student_score;</span><br><span class="line"># 插入视图</span><br><span class="line">insert into student_score values(&#39;S1&#39;,&#39;W&#39;,&#39;DB&#39;,&#39;90&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="规范化设计"><a href="#规范化设计" class="headerlink" title="规范化设计"></a>规范化设计</h2><p>克服冗余和异常问题</p>
-<h2 id="函数依赖"><a href="#函数依赖" class="headerlink" title="函数依赖"></a>函数依赖</h2><p>有关系模式 $R(U)$，$X,Y\subseteq U$。</p>
-<p>若 $t[X]=s[X]\implies t[Y]=s[Y]$，则 $X\to Y$ </p>
-<p>平凡的函数依赖：$Y\subseteq X$</p>
-<p>推理规则：</p>
-<ol>
-<li>$X\to Y, WY\to Z\vDash WX\to Z$</li>
-<li>$X\to Y,W\to Z\vDash X\cup(W-Y)\to YZ$</li>
-</ol>
-<p>$X$ 是候选键 $\iff X\subseteq U, X\to U$ ，且 $\forall X_1\subset X, X_1\not\to U$</p>
-<p>闭包：$X^+=\{A\mid F\vDash X\to A\}$</p>
-<p>FD的最小依赖集 $G$ ：</p>
-<ol>
-<li>每个FD右边都是单属性</li>
-<li>没有冗余FD</li>
-<li>每个FD左边没有冗余属性</li>
-</ol>
-<h2 id="模式分解"><a href="#模式分解" class="headerlink" title="模式分解"></a>模式分解</h2><p>无损分解：不会产生寄生元组</p>
-<p>若 $R=A_1A_2…A_n$ ，$\rho=\{R_1,R_2,…,R_k\}$ 为 $R$ 的一个分解，chase过程可检验是否相对 $F$ 有无损分解特性：</p>
-<ol>
-<li>构造 $n\times k$ 的表格，若 $ A_j $ 在 $ R_i $ 中，则在第 $ i $ 行第 $ j $ 列填 $a_j $，否则填 $b_{ij} $ 。</li>
-<li>检查每个FD $X\to Y$，若有两行 $X$ 相等而 $Y$ 不相等，则修改成相等（$a_j $ 优先）。</li>
-<li>若有一行<strong>全是</strong> $a_j $ 则是无损分解。</li>
-</ol>
-<p>保持函数依赖的分解：逐个检验每个FD是否被蕴含</p>
-<h2 id="关系模式的范式"><a href="#关系模式的范式" class="headerlink" title="关系模式的范式"></a>关系模式的范式</h2><p>主属性：候选键中的属性</p>
-<p>1NF：每个属性是不可分割的原子值</p>
-<p>2NF：1NF+所有非主属性<strong>完全依赖</strong>于候选键。（分解：分离出部分依赖）</p>
-<p>3NF：1NF+所有非主属性<strong>不传递依赖</strong>于候选键。（分解：分离出传递依赖）</p>
-<p>BCNF：1NF+所有属性<strong>不传递依赖</strong>于候选键。（等价定义：所有非平凡FD左部为超键）（分解：求出最小依赖集，每个依赖构成模式集，最后加入候选键）</p>
-<p><img src="数据库笔记.assets/image-20210426233600564.png" alt="image-20210426233600564" style="zoom:67%;" /></p>
-<p>$X\to\to Y$ 是平凡的MVD$\iff $ $Y\subseteq X$ 或 $XY=U$</p>
-<p>4NF：所有<strong>非平凡MVD</strong>左部为超键。</p>
-<h3 id="连接依赖"><a href="#连接依赖" class="headerlink" title="连接依赖"></a>连接依赖</h3><p><img src="数据库笔记.assets/image-20210426154344349.png" alt="image-20210426154344349" style="zoom:67%;" /></p>
-<h3 id="5NF"><a href="#5NF" class="headerlink" title="5NF"></a>5NF</h3><p><img src="数据库笔记.assets/image-20210426154408119.png" alt="image-20210426154408119" style="zoom:67%;" /></p>
-<h2 id="ER模型"><a href="#ER模型" class="headerlink" title="ER模型"></a>ER模型</h2><p><img src="数据库笔记.assets/image-20210426222243612.png" alt="image-20210426222243612" style="zoom:67%;" /></p>
-<p><img src="数据库笔记.assets/image-20210426222454648.png" alt="image-20210426222454648" style="zoom:67%;" /></p>
-<h2 id="索引技术"><a href="#索引技术" class="headerlink" title="索引技术"></a>索引技术</h2><h3 id="主索引"><a href="#主索引" class="headerlink" title="主索引"></a>主索引</h3><p>稠密索引、稀疏索引</p>
-<p>多级索引</p>
-<h3 id="辅助索引"><a href="#辅助索引" class="headerlink" title="辅助索引"></a>辅助索引</h3><h3 id="hash索引"><a href="#hash索引" class="headerlink" title="hash索引"></a>hash索引</h3><p>快</p>
-<p>不能做任意查询（丢失数据顺序）</p>
-<h3 id="B-树索引"><a href="#B-树索引" class="headerlink" title="B+树索引"></a>B+树索引</h3><p>归并排序（因为连续访问高效）</p>
-<p>块IO</p>
-
+          <p>这是一个大坑</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/04/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -546,7 +420,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-28 13:58:04" itemprop="dateModified" datetime="2021-04-28T13:58:04+08:00">2021-04-28</time>
+        <time title="Modified: 2021-04-30 21:01:26" itemprop="dateModified" datetime="2021-04-30T21:01:26+08:00">2021-04-30</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
