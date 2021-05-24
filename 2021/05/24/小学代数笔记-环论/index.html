@@ -23,27 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="学不会">
+<meta name="description" content="你怎么这么菜，连小学的东西都学不会">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ICS笔记">
-<meta property="og:url" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="小学代数笔记-环论">
+<meta property="og:url" content="http://abcdhhhh.github.io/2021/05/24/%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0-%E7%8E%AF%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Fish Port">
-<meta property="og:description" content="学不会">
+<meta property="og:description" content="你怎么这么菜，连小学的东西都学不会">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/ICS笔记.assets/image-20210510223703619.png">
-<meta property="og:image" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/ICS笔记.assets/image-20210510233354777.png">
-<meta property="og:image" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/ICS笔记.assets/image-20210510235915607.png">
-<meta property="og:image" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/ICS笔记.assets/image-20210511002105773.png">
-<meta property="og:image" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/ICS笔记.assets/image-20210511085247899.png">
-<meta property="article:published_time" content="2021-05-05T14:20:38.000Z">
-<meta property="article:modified_time" content="2021-05-11T00:57:32.192Z">
+<meta property="article:published_time" content="2021-05-24T06:36:11.000Z">
+<meta property="article:modified_time" content="2021-05-24T06:40:46.358Z">
 <meta property="article:author" content="abcdhhhh">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/ICS笔记.assets/image-20210510223703619.png">
 
 
-<link rel="canonical" href="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://abcdhhhh.github.io/2021/05/24/%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0-%E7%8E%AF%E8%AE%BA/">
 
 
 <script class="page-configurations">
@@ -55,7 +49,7 @@
     lang   : 'en'
   };
 </script>
-<title>ICS笔记 | Fish Port</title>
+<title>小学代数笔记-环论 | Fish Port</title>
   
 
 
@@ -155,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">2. 处理器体系结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%A4%84%E7%90%86%E5%99%A8%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">3. 处理器实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BA%BF"><span class="nav-number">2.1.</span> <span class="nav-text">总线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E4%B8%AD%E6%96%AD%E3%80%81%E9%99%B7%E5%85%A5%E5%8F%8A%E5%BC%82%E5%B8%B8"><span class="nav-number">3.</span> <span class="nav-text">4. 中断、陷入及异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%A4%84%E7%90%86%E5%99%A8%E6%80%A7%E8%83%BD%E4%B8%8E%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">5. 处理器性能与流水线处理器的设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF"><span class="nav-number">5.</span> <span class="nav-text">7. 内存管理技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E5%88%86%E7%BA%A7%E5%AD%98%E5%82%A8%E4%BD%93%E7%B3%BB"><span class="nav-number">6.</span> <span class="nav-text">9. 分级存储体系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E7%BC%BA%E5%A4%B1%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="nav-number">6.1.</span> <span class="nav-text">缓存缺失类型：</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%AF%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">环论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF"><span class="nav-number">1.1.</span> <span class="nav-text">环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E7%8E%AF"><span class="nav-number">1.2.</span> <span class="nav-text">矩阵环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E5%85%83%E6%95%B0%E7%8E%AF%EF%BC%88%E9%9D%9E%E4%BA%A4%E6%8D%A2%E9%99%A4%E7%8E%AF%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">四元数环（非交换除环）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E6%83%B3"><span class="nav-number">1.4.</span> <span class="nav-text">理想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%86%E7%8E%AF"><span class="nav-number">1.5.</span> <span class="nav-text">商环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E6%95%B0%E7%8E%AF"><span class="nav-number">1.6.</span> <span class="nav-text">整数环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%90%8C%E6%80%81"><span class="nav-number">1.7.</span> <span class="nav-text">环同态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%90%8C%E6%80%81%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.8.</span> <span class="nav-text">环同态基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%8E%AF%E5%90%8C%E6%9E%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.9.</span> <span class="nav-text">第一环同构基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%8E%AF%E5%90%8C%E6%9E%84%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-number">1.10.</span> <span class="nav-text">第二环同构基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A0%E7%8E%AF"><span class="nav-number">1.11.</span> <span class="nav-text">素环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D%E5%90%8C%E6%9E%84"><span class="nav-number">1.12.</span> <span class="nav-text">反同构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2%E6%95%B4%E7%8E%AF%E7%9A%84%E5%88%86%E5%BC%8F%E5%9F%9F"><span class="nav-number">1.13.</span> <span class="nav-text">交换整环的分式域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%8E%AF"><span class="nav-number">1.14.</span> <span class="nav-text">多项式环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A1%E6%95%B0"><span class="nav-number">1.14.1.</span> <span class="nav-text">次数</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -217,7 +211,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/05/05/ICS%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://abcdhhhh.github.io/2021/05/24/%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0-%E7%8E%AF%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -230,7 +224,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ICS笔记
+          小学代数笔记-环论
         </h1>
 
         <div class="post-meta-container">
@@ -240,16 +234,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-05-05 22:20:38" itemprop="dateCreated datePublished" datetime="2021-05-05T22:20:38+08:00">2021-05-05</time>
+      <time title="Created: 2021-05-24 14:36:11 / Modified: 14:40:46" itemprop="dateCreated datePublished" datetime="2021-05-24T14:36:11+08:00">2021-05-24</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-11 08:57:32" itemprop="dateModified" datetime="2021-05-11T08:57:32+08:00">2021-05-11</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -261,7 +249,7 @@
     </span>
 
   
-    <span id="/2021/05/05/ICS%E7%AC%94%E8%AE%B0/" class="post-meta-item leancloud_visitors" data-flag-title="ICS笔记" title="Views">
+    <span id="/2021/05/24/%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0-%E7%8E%AF%E8%AE%BA/" class="post-meta-item leancloud_visitors" data-flag-title="小学代数笔记-环论" title="Views">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -270,7 +258,7 @@
     </span>
 </div>
 
-            <div class="post-description">学不会</div>
+            <div class="post-description">你怎么这么菜，连小学的东西都学不会</div>
         </div>
       </header>
 
@@ -278,144 +266,186 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="2-处理器体系结构"><a href="#2-处理器体系结构" class="headerlink" title="2. 处理器体系结构"></a>2. 处理器体系结构</h1><p>LC-2200：</p>
+        <h1 id="环论"><a href="#环论" class="headerlink" title="环论"></a>环论</h1><h2 id="环"><a href="#环" class="headerlink" title="环"></a>环</h2><p>若</p>
 <ol>
-<li>8 条指令 。一条指令只完成一个操作（add, nand, addi, lw, sw, beq, jalr, halt）</li>
-<li>指令长度固定 。 32 位</li>
-<li>只有 Load 和 Store 指令可以访问存储器 。</li>
-<li>寻址模式简单 。简化了从存储器取数操作数</li>
-</ol>
-<p>寻址模式：</p>
-<ol>
-<li>寄存器寻址</li>
-<li>立即数寻址</li>
-<li>内存寻址：基址+偏移量</li>
-<li>if-then-else寻址：PC+偏移量</li>
-<li>switch寻址：<ol>
-<li>有限、稀疏：用多个if-then-else</li>
-<li>连续、不稀疏：跳转表</li>
+<li>$(R,+,0)$ 是Abel群</li>
+<li>$(R,\cdot, 1)$ 是幺半群</li>
+<li>$\cdot$ 对 $+$ 满足分配律，即 $\forall a,b,c\in R:$<ol>
+<li>$a(b+c)=ab+ac$</li>
+<li>$(a+b)c=ac+bc$</li>
 </ol>
 </li>
 </ol>
-<p>编译一个过程调用的步骤：</p>
+<p>则 $(R,+,\cdot)$ 为环。</p>
+<blockquote>
+<p><strong>交换环</strong>：$(R,\cdot,1)$ 为交换幺半群（满足二项式定理）</p>
+<p><strong>整环(domain)</strong>：$0\ne 1$，且 $ab=0\iff a=0或b=0$</p>
+<p><strong>除环</strong>：$(R-\{0\},\cdot,1)$ 为群</p>
+<p><strong>域</strong>：$(R-\{0\},\cdot,1)$ 为Abel群</p>
+<p>证明子环：加法封闭+加法逆元+乘法封闭+乘法单位元</p>
+</blockquote>
+<p>有限整环一定是除环</p>
+<p>环上所有单位（可逆元，unit）构成一个群</p>
+<blockquote>
+<p>证明Euler函数为积性函数：构造<font color="brown"> $\varphi: U(\Z_{mn})\to U(\Z_m)\times U(\Z_n)$ </font>，证明它是同构</p>
+</blockquote>
+<h2 id="矩阵环"><a href="#矩阵环" class="headerlink" title="矩阵环"></a>矩阵环</h2><p>$n\times n$ 实矩阵构成的环：$M_n(R)$</p>
+<p>若 $M_n(R)$ 为交换环，$A=(a_{ij})_{n\times n}\in M_n(R)$ ，则</p>
+<p>$|A|=\sum_{\pi\in S_n}(-1)^{\text{sg}(\pi)}a_{1\pi(1)}a_{2\pi(2)}…a_{n\pi(n)}$</p>
+<p>$A$ 可逆 $\iff |A|$ 可逆</p>
+<h2 id="四元数环（非交换除环）"><a href="#四元数环（非交换除环）" class="headerlink" title="四元数环（非交换除环）"></a>四元数环（非交换除环）</h2><p>$M_2(\C)=\{(a_{ij})\mid a_{ij}\in \C,1\le i,j\le 2\}$</p>
+<p>$\H=\{\begin{pmatrix}a&amp;b\-\bar{b}&amp;\bar{a}\end{pmatrix}\mid a,b\in \C\}\subseteq M_2(\C)$</p>
+<font color="gray"> $\begin{pmatrix}a&b\\-\bar{b}&\bar{a}\end{pmatrix}^{-1}=\frac{1}{|a|^2+|b|^2}\begin{pmatrix}\bar{a}&-b\\\bar{b}&a\end{pmatrix} (|a|^2+|b|^2\ne 0)$</font>
+
+<p>或</p>
+<p> $\H=\{a+bi+cj+dk\mid a,b,c,d\in \R, i^2=j^2=k^2=1,ij=k=-ji,jk=i=-kj,ki=j=-ik\}$</p>
+<font color="gray">$(a+bi+cj+dk)^{-1}=\frac{1}{a^2+b^2+c^2+d^2}(a-bi-cj-dk)$</font>
+
+<h2 id="理想"><a href="#理想" class="headerlink" title="理想"></a>理想</h2><p>若 $(R,+,\cdot)$ 为环， $I\le (R,+)$ ， $\forall i\in I, r\in R, ir,ri\in I$ ，称 $I$ 为 $R$ 的理想（记作 $I\unlhd R$）</p>
+<blockquote>
+<p>除环和域只有平凡的理想。</p>
+<p>只有平凡理想的交换环一定是域。</p>
+<p>判断理想：加法封闭，$ri,ir\in I$</p>
+</blockquote>
+<p>主理想：$<a>=\{\sum_{i=1}^mx_iay_i\mid x_i,y_i\in R,m=1,2,…\}$</p>
+<p>主理想环：任意理想都是主理想的环</p>
+<p>生成理想：$<S>=\sum_{a\in S}<a>$</p>
+<p>理想的和：$I+J=\{x+y\mid x\in I,y\in J\}$</p>
+<p><strong>理想的积</strong>：$IJ=\{\sum_{i=1}^mx_iy_i\mid x_i\in I, y_i\in J,m=1,2,…\}$</p>
+<blockquote>
+<p>左理想：$Ra$</p>
+<p>右理想：$aR$</p>
+<p>当 $R$ 为交换环时，$<a>=Ra=aR$</p>
+</blockquote>
+<h2 id="商环"><a href="#商环" class="headerlink" title="商环"></a>商环</h2><p>$R$ 上的同余关系 $\sim$ 对应 $R$ 的理想： $\bar{0}$</p>
+<p>商环：$R/I=\{a+I\mid a\in R\}$</p>
+<h2 id="整数环"><a href="#整数环" class="headerlink" title="整数环"></a>整数环</h2><p>$(\Z,+,\cdot)$</p>
+<p>若 $I$ 为 $\Z$ 的理想 ，则 $I\le (\Z,+)$</p>
+<p>$\therefore I=<k>=\{kn\mid n\in \Z\}$</p>
 <ol>
-<li>保证<strong>调用者的状态（寄存器）</strong>被保护好以便从过程调用中返回时得以恢复</li>
-<li>将<strong>实际参数</strong>传递给调用者：寄存器（少量参数）+内存栈（多余参数）</li>
-<li>记住<strong>返回地址</strong>：<code>JAL</code> ，保存返回地址，PC=被调用者起始地址</li>
-<li>将控制权交给被调用者</li>
-<li>为被调用者的<strong>局部变量</strong>分配空间：内存栈</li>
-<li>从被调用者接受<strong>返回值</strong>并传给调用者：寄存器（少量参数）+内存栈（多余参数）</li>
-<li>返回调用点：<code>JAL</code> ，PC=返回地址</li>
+<li>若 $k$ 为合数，$k=m_1m_2$ ， $m_1,m_2$ 为 $\Z/<k>$ 的零元，$\Z/<k>$ 不是整环</li>
+<li>若 $k$ 为素数，$\Z/<k>$ 是域</li>
 </ol>
-<p>保存策略：谁使用公共寄存器，谁负责保存和恢复</p>
-<p><img src="ICS笔记.assets/image-20210510223703619.png" alt="image-20210510223703619" style="zoom: 50%;" /></p>
-<p>栈的状态：</p>
+<p>在 $\Z/<k>$ 中，$\bar{a}$ 为 $\Z/<k>$ 可逆元当且仅当 $(a,k)=1$ ，个数为 $\varphi (k)$</p>
+<p>$|U(\Z/<k>)|=\varphi(k)$</p>
+<p>$\therefore a^{\varphi(k)}\equiv 1\pmod k (a\perp k)$</p>
+<h2 id="环同态"><a href="#环同态" class="headerlink" title="环同态"></a>环同态</h2><p>若$\varphi: R\to R’$满足：</p>
 <ol>
-<li>调用者保存<strong>t0~t2</strong>（临时）</li>
-<li>调用者在a0~a2放置参数，保存<strong>额外参数</strong></li>
-<li>调用者保存<strong>额外返回值</strong></li>
-<li>调用者保存<strong>$ra</strong>（上层返回地址）</li>
-<li>调用（$ra记录返回地址，PC跳转）</li>
-<li>被调用者保存<strong><em>$fp</em></strong>（上层帧指针），并将$sp赋值给$fp</li>
-<li>被调用者保存<strong><em>s0~s2</em></strong>（调用者的寄存器）</li>
-<li>被调用者给<strong><em>局部变量</em></strong>分配栈空间</li>
-<li>返回（PC跳转）</li>
-<li>调用者恢复$ra</li>
-<li>调用者根据需要恢复额外返回值</li>
-<li>调用者丢弃额外参数</li>
-<li>调用者恢复t0~t2</li>
-</ol>
-<p>变长指令：不浪费空间，没有操作数位数限制，指令集设计更灵活；实现更加复杂</p>
-<h1 id="3-处理器实现"><a href="#3-处理器实现" class="headerlink" title="3. 处理器实现"></a>3. 处理器实现</h1><p>宏状态：FETCH, DECODE, EXECUTE</p>
-<p>微状态：ifetch1, ifetch2, …</p>
-<ol>
-<li>FETCH<ol>
-<li>ifetch1: $PC \to MAR, PC\to A$</li>
-<li>ifetch2: $MEM[MAR]\to IR$</li>
-<li>ifetch3: $A+1\to PC$</li>
-</ol>
-</li>
-<li>DECODE<ol>
-<li>beq1: $Ry\to A$</li>
-<li>beq2: $Rz\to B$</li>
-<li>beq3: $A-B\to Z$</li>
-<li>beq4: $PC+1\to A$</li>
-<li>beq5: $Ext(offset)\to B$</li>
-<li>beq6: $A+B\to PC$</li>
-</ol>
-</li>
-<li>EXECUTE</li>
-</ol>
-<p><img src="ICS笔记.assets/image-20210510233354777.png" alt="image-20210510233354777" style="zoom:80%;" /></p>
-<h2 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h2><p>串行：成本低，节省布线空间，适合长距离传输，工作频率高；需串-并行转换</p>
-<p>并行：时序逻辑简单；远距离成本高，占用更多空间，无法持续提高工作频率（信号线间干扰）</p>
-<p>单总线：结构简单，成本低，易于接入新设备；多个部件争用，带宽低，负载重，不支持并发传送</p>
-<p>双总线：提高系统吞吐量，支持突发传送；需增加通道硬件设备、额外的管理</p>
-<p>三总线：提高高速外设访问速度；任一时刻只能使用一种总线，系统工作效率较低</p>
-<p>四总线：桥</p>
-<p>总线仲裁：多个主设备竞争</p>
-<h1 id="4-中断、陷入及异常"><a href="#4-中断、陷入及异常" class="headerlink" title="4. 中断、陷入及异常"></a>4. 中断、陷入及异常</h1><p>程序不连续性：</p>
-<ul>
-<li><p>中断：外部<strong>设备</strong>引起的不连续性</p>
-</li>
-<li><p>陷入：当前程序无法处理，只能由<strong>OS</strong>处理</p>
-</li>
-<li><p>异常：脱离程序正常执行轨迹，由当前<strong>程序</strong>处理</p>
-</li>
-</ul>
-<p><img src="ICS笔记.assets/image-20210510235915607.png" alt="image-20210510235915607" style="zoom:67%;" /></p>
-<p>体系结构与操作系统的合作：</p>
-<ol>
-<li>CPU 定义中断、异常及其编号向量值</li>
-<li>OS 定义异常软件中断、陷入系统调用及其编号向量值</li>
-<li>在启动时，OS建立中断向量表IVT，给出处理过程的地址</li>
-<li>在普通程序执行时，硬件检测异常和陷入，并将向量值 → <strong>ETR 寄存器</strong></li>
-<li>在普通程序执行时，硬件检测外部中断 ，接收<strong>中断设备</strong>的向量值</li>
-<li>硬件使用向量值索引中断向量表 ，将控制权交给处理过程</li>
-</ol>
-<p><img src="ICS笔记.assets/image-20210511002105773.png" alt="image-20210511002105773" style="zoom:50%;" /></p>
-<ol>
-<li>保存 $k0</li>
-<li>打开中断</li>
-<li>保存寄存器</li>
-<li>执行设备代码</li>
-<li>恢复寄存器</li>
-<li>关闭中断</li>
-<li>恢复 $k0</li>
-<li>返回原始程序<ol>
-<li>原子操作：PC &lt;- $k0 ，打开中断</li>
-</ol>
+<li><script type="math/tex; mode=display">\forall a,b\in R, \varphi(ab)=\varphi(a)+\varphi(b)</script></li>
+<li><script type="math/tex; mode=display">\forall a,b\in R, \varphi(ab)=\varphi(a)\varphi(b)</script></li>
+<li><p>$\varphi(1)=1’$</p>
 </li>
 </ol>
-<p>处理器与设备之间的信号交换：</p>
+<p>则$\varphi$是 $R$ 到 $R’$ 的同态。记作$R\sim R’$。</p>
+<p>同态核：$\ker \varphi =\varphi^{-1}(0)$</p>
+<blockquote>
+<p>同构：$\varphi$ 为双射，记作 $R\cong R’$</p>
+<p>自同构：双射 $\varphi: R\to R$</p>
+<p>内自同构： $\varphi(x)=uxu^{-1}$</p>
+<p>Jordan同态：加法同态，且</p>
 <ol>
-<li>设备有中断时，对 INT 线 断言</li>
-<li>处理器在<strong>完成当前指令后</strong>，检查 INT 线，判断是否有中断请求</li>
-<li>若有中断，则处理器<strong>进入 INT 宏状态</strong>，并将总线上的 INTA 线 断言</li>
-<li>设备收到处理器发出的 INTA 信号后，将自己的中断向量放到数据总线</li>
-<li>处理器收到中断向量后，在 中断向量表 中查出处理过程的地址</li>
-<li>将 PC 保存到 $k0 ，并将中断向量表中取出的值填入 PC</li>
+<li>$\forall a,b\in R, \varphi(aba)=\varphi(a)\varphi(b)\varphi(a)$</li>
+<li>$\varphi(1)=1’$</li>
 </ol>
-<h1 id="5-处理器性能与流水线处理器的设计"><a href="#5-处理器性能与流水线处理器的设计" class="headerlink" title="5. 处理器性能与流水线处理器的设计"></a>5. 处理器性能与流水线处理器的设计</h1><p>SPEC基准测试</p>
-<p>$SPEC_{ratio}=\frac{参考机器执行时间}{目标机器执行时间}$</p>
-<p>响应时间（墙上时间）：计算机完成某任务的总时间</p>
-<p>吞吐率（带宽）：单位时间内完成的任务数量</p>
-<p>存储器容量：所有存储单元的总数目</p>
-<p>基本原则：大概率事件优先，Amdahl定律（加快某部件执行速度所获得的系统性能加速比受限于该部件在系统中所占的<strong>重要性比例</strong>）</p>
-<p>波特率：全算</p>
-<p>比特率：只算有效信息</p>
-<h1 id="7-内存管理技术"><a href="#7-内存管理技术" class="headerlink" title="7. 内存管理技术"></a>7. 内存管理技术</h1><p>基址+限长寄存器：方便进行动态重定位</p>
-<p>固定尺寸分区：有内部、外部碎片</p>
-<p>​    分配表以固定尺寸分区为基础维护着总结信息</p>
-<p>变长分区：有外部碎片，可以缩并</p>
-<p>分页：可能有内部碎片</p>
-<p><img src="ICS笔记.assets/image-20210511085247899.png" alt="image-20210511085247899" style="zoom:50%;" /></p>
-<p>分段：每段地址都从0开始，可能有外部碎片</p>
-<h1 id="9-分级存储体系"><a href="#9-分级存储体系" class="headerlink" title="9. 分级存储体系"></a>9. 分级存储体系</h1><h2 id="缓存缺失类型："><a href="#缓存缺失类型：" class="headerlink" title="缓存缺失类型："></a>缓存缺失类型：</h2><ol>
-<li>冷/强制缺失：第一次访问给定内存单元</li>
-<li>容量缺失：缓存是满的</li>
-<li>冲突缺失：缓存不满，但映射策略会引入被其他元素占用的缓存行</li>
+</blockquote>
+<h2 id="环同态基本定理"><a href="#环同态基本定理" class="headerlink" title="环同态基本定理"></a>环同态基本定理</h2><p>若有同态 $f:R\to R’$，则 <script type="math/tex">R/\ker f\cong\text{Im} f</script></p>
+<h2 id="第一环同构基本定理"><a href="#第一环同构基本定理" class="headerlink" title="第一环同构基本定理"></a>第一环同构基本定理</h2><p>若有满同态 $\varphi: R\to R’$ ， $\ker \varphi\subseteq H$ ， $H\unlhd R$ 。</p>
+<p>记 $H’=\varphi(H)$ ，则</p>
+<p>$R/H\cong R’/H’$</p>
+<h2 id="第二环同构基本定理"><a href="#第二环同构基本定理" class="headerlink" title="第二环同构基本定理"></a>第二环同构基本定理</h2><p>若$S\le R, I\unlhd R$，则<br>$S+I\le R$</p>
+<script type="math/tex; mode=display">I\unlhd S+I</script><script type="math/tex; mode=display">(S+I)/I\cong S/(S\cap I)</script><h2 id="素环"><a href="#素环" class="headerlink" title="素环"></a>素环</h2><p>$1$ 的生成子环</p>
+<h2 id="反同构"><a href="#反同构" class="headerlink" title="反同构"></a>反同构</h2><p>若双射 $\varphi: R\to R’$ 满足：</p>
+<ol>
+<li><script type="math/tex; mode=display">\forall a,b\in R, \varphi(ab)=\varphi(a)+\varphi(b)</script></li>
+<li><script type="math/tex; mode=display">\forall a,b\in R, \varphi(ab)=\varphi(b)\varphi(a)</script></li>
+<li><p>$\varphi(1)=1’$ （可由第2点推出）</p>
+</li>
 </ol>
+<p>则 $\varphi$ 为 $R$ 到 $R’$ 的反同构</p>
+<blockquote>
+<p>反自同构：$\varphi :R\to R$</p>
+<p>对合：$\varphi$ 为反自同构， $\varphi^2=1$</p>
+</blockquote>
+<p>e.g.</p>
+<p>$\varphi: \H\to \H$ ， $\varphi(x)=\bar{x}$ <font color="brown">（即 $\varphi (a+bi+cj+dk)=a-bi-cj-dk$ ）</font></p>
+<p>$\varphi: M_2(\C)\to M_2(\C)$ ， $\varphi(A)=A^*$</p>
+<p>$\varphi: M_n(\R)\to M_n(\R)$ ， $\varphi(A)=A^T$</p>
+<h2 id="交换整环的分式域"><a href="#交换整环的分式域" class="headerlink" title="交换整环的分式域"></a>交换整环的分式域</h2><p>若 $D$ 为交换整环，则必有域 $F$ 使得 $D$ 为 $F$ 的子环。</p>
+<p>记 $D^*=D-\{0\}$</p>
+<p>定义等价关系 $(a,b)\sim (c,d)\iff ad=bc$</p>
+<p>$D\times D^<em>/\sim=\{\overline{(a,b)}\mid a\in D, b\in D^</em>\}$</p>
+<p>记 $\overline{(a,b)}=\frac{a}{b}$</p>
+<p>定义运算</p>
+<p>$\frac{a}{b}+\frac{c}{d}=\frac{ad+bc}{bd}$</p>
+<p>$\frac{a}{b}\cdot \frac{c}{d}=\frac{ac}{bd}$</p>
+<p>可证明 $F=D\times D^*/\sim$ 按上述运算构成一个域。</p>
+<blockquote>
+<p>证明：</p>
+<p>$<F,+>$ 构成Abel群：</p>
+<ol>
+<li>交换律、结合律显然</li>
+<li>单位元 $\frac{0}{1}$</li>
+<li>负元 $\frac{-a}{b}$</li>
+</ol>
+<p>$<F-\{\overline{\frac{0}{1}}\},\cdot>$ 构成Abel群</p>
+<ol>
+<li>交换律、结合律显然</li>
+<li>单位元 $\frac{1}{1}$</li>
+<li>逆元 $\frac{b}{a}$</li>
+</ol>
+</blockquote>
+<p>若 $D$ 为交换整环，$F$ 为 $D$ 的分式域，$F’$ 为域，$\eta_D: D\to F’$ 为单同态，则 $\eta_D$ 一定能扩张成 $F\to F’$ 的同态。</p>
+<blockquote>
+<p>$F=\{ab^{-1}\mid a\in D,b\in D^*\}$</p>
+<p>定义 $\eta(ab^{-1})=\eta_D(a)(\eta_D(b))^{-1}$</p>
+<p>若 $ab^{-1}=cd^{-1}$ </p>
+<p>则 $ad=bc$</p>
+<p>$\therefore \eta_D(ab)=\eta_D(bc)$</p>
+<p>$\therefore \eta(ab^{-1})=\eta(cd^{-1})$</p>
+<p>$\therefore \eta$ 为合法映射</p>
+<p>可证明 $\eta$ 保持加法和乘法运算</p>
+</blockquote>
+<h2 id="多项式环"><a href="#多项式环" class="headerlink" title="多项式环"></a>多项式环</h2><p>若 $R,R’$ 均为交换环，$R\le R’$ ，$U\subseteq R’$ ，记 $R’$ 中包含 $R\cup U$ 的最小子环为 $R[U]$</p>
+<p>$R[U][V]=R[U\cup V]$</p>
+<p>$R[u]=\{a_0+a_1u+a_2u^2+…+a_ku^k\mid a_i\in R, k\ge 0\}$ （元素表示不一定唯一）</p>
+<p>若 $R$ 为交换环，$x$ 为未定元，$R[x]=\{\sum_{i=0}^ka_ix^i\mid a_i\in R, k\ge 0\}$</p>
+<p>规定 $\sum_{i=0}^ka_ix^i=\sum_{i=0}^lb_ix^i \iff k=l, a_i=b_i$</p>
+<p>加法：$\sum_{i=0}^na_ix^i+\sum_{i=0}^nb_ix^i=\sum_{i=0}^n(a_i+b_i)x^i$</p>
+<p>乘法：$(\sum_{i=0}^na_ix^i)(\sum_{i=0}^mb_ix^i)=\sum_{k=0}^{n+m}(\sum_{i+j=k}a_ib_j)x^k$</p>
+<p>若 $u\in R’$ ，则存在唯一同态 $f:R[x]\to S$ ，使得 $\forall a\in R, f(a)=a, f(x)=u$</p>
+<p>定义 $\forall \sum_{i=0}^na_ix^i\in R[x], f(\sum_{i=0}^na_ix^i)=\sum_{i=0}^na_iu^i$</p>
+<p>对任一同态 $f:R\to R’, u\in R’$</p>
+<p>则 $f$ 可唯一扩张为同态 $f’:R[x]\to R’$ ，使得 $f’(x)=u, \forall a\in R, f’(a)=a$</p>
+<p>$\varphi: R[x]\to R[u]$</p>
+<p>$I=\ker \varphi=\{\sum_{i=0}^na_ix^i\in R[x]\mid \sum_{i=0}^na_iu^i=0\}$</p>
+<p>$R[x]/\ker \varphi\cong R[u]$</p>
+<p>$I\cap R=\{0\}$</p>
+<p>若 $I=\{0\}$ ，则 $u$ 为 $R$ 上的超越元，否则为代数元</p>
+<p>若 $Q[x]$ 为主理想环， $f(x)$ 为 $I$ 中次数最低的多项式，则 $Q[x]=<f(x)>$ </p>
+<h3 id="次数"><a href="#次数" class="headerlink" title="次数"></a>次数</h3><p>若 $R$ 为交换环，$f(x)\in R[x]$</p>
+<p>$\deg f(x)$ 定义为 $f(x)$ 最高次，$\deg 0=-\infty$</p>
+<blockquote>
+<p> 若 $R$ 为整环，则 $\deg fg=\deg f+\deg g$</p>
+</blockquote>
+<p>若 $f(x),g(x)\in R[x], g(x)\ne 0$ ，$b_m$ 为 $g(x)$ 首项系数，则 $\exists k\in \N, q(x),r(x)\in R[x]$</p>
+<p>$b_m^k f(x)=g(x)q(x)+r(x), \deg r(x)&lt;\deg g(x)$</p>
+<blockquote>
+<p>证明：对 $f(x)$ 的次数进行归纳</p>
+<p>若 $R$ 为域，则 $g(x),r(x)$ 唯一</p>
+<p>若 $q(x)=x-a$ ，则 $g(x),r(x)$ 唯一</p>
+</blockquote>
+<p>若 $F$ 为域，则 $F[x]$ 为主理想域。</p>
+<blockquote>
+<p>证明：</p>
+<p>设 $I\unlhd F[x]$</p>
+<p>当 $I=\{0\}$ ， $I=<0>$ 为主理想</p>
+<p>当 $I\ne \{0\}$  ，设 $f(x)$ 为 $I$ 中次数最低的非零多项式</p>
+<p>只需证 $I=<f(x)>$</p>
+<p>$\forall g(x)\in I, g(x)=f(x)q(x)+r(x)$</p>
+<p>$\therefore r(x)\in I, \deg r(x)&lt;\deg f(x)$</p>
+<p>$\therefore r(x)=0$</p>
+<p>$F[x]$ 每个理想的生成元只相差一个系数。（当首项系数为1，称为“首一多项式”）</p>
+</blockquote>
 
     </div>
 
@@ -437,14 +467,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/26/%E6%80%9D%E4%BF%AE%E7%AC%94%E8%AE%B0/" rel="prev" title="思修笔记">
-                  <i class="fa fa-chevron-left"></i> 思修笔记
+                <a href="/2021/05/05/ICS%E7%AC%94%E8%AE%B0/" rel="prev" title="ICS笔记">
+                  <i class="fa fa-chevron-left"></i> ICS笔记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/05/24/%E5%B0%8F%E5%AD%A6%E4%BB%A3%E6%95%B0%E7%AC%94%E8%AE%B0-%E7%8E%AF%E8%AE%BA/" rel="next" title="小学代数笔记-环论">
-                  小学代数笔记-环论 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
