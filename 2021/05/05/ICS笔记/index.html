@@ -96,7 +96,11 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Fish Port" type="application/atom+xml">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="Fish Port" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -155,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">2. 处理器体系结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%A4%84%E7%90%86%E5%99%A8%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">3. 处理器实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BA%BF"><span class="nav-number">2.1.</span> <span class="nav-text">总线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E4%B8%AD%E6%96%AD%E3%80%81%E9%99%B7%E5%85%A5%E5%8F%8A%E5%BC%82%E5%B8%B8"><span class="nav-number">3.</span> <span class="nav-text">4. 中断、陷入及异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%A4%84%E7%90%86%E5%99%A8%E6%80%A7%E8%83%BD%E4%B8%8E%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">5. 处理器性能与流水线处理器的设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF"><span class="nav-number">5.</span> <span class="nav-text">7. 内存管理技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E5%88%86%E7%BA%A7%E5%AD%98%E5%82%A8%E4%BD%93%E7%B3%BB"><span class="nav-number">6.</span> <span class="nav-text">9. 分级存储体系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E7%BC%BA%E5%A4%B1%E7%B1%BB%E5%9E%8B%EF%BC%9A"><span class="nav-number">6.1.</span> <span class="nav-text">缓存缺失类型：</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%A4%84%E7%90%86%E5%99%A8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text"> 2. 处理器体系结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%A4%84%E7%90%86%E5%99%A8%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text"> 3. 处理器实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BA%BF"><span class="nav-number">2.1.</span> <span class="nav-text"> 总线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E4%B8%AD%E6%96%AD-%E9%99%B7%E5%85%A5%E5%8F%8A%E5%BC%82%E5%B8%B8"><span class="nav-number">3.</span> <span class="nav-text"> 4. 中断、陷入及异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%A4%84%E7%90%86%E5%99%A8%E6%80%A7%E8%83%BD%E4%B8%8E%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text"> 5. 处理器性能与流水线处理器的设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF"><span class="nav-number">5.</span> <span class="nav-text"> 7. 内存管理技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E5%88%86%E7%BA%A7%E5%AD%98%E5%82%A8%E4%BD%93%E7%B3%BB"><span class="nav-number">6.</span> <span class="nav-text"> 9. 分级存储体系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E7%BC%BA%E5%A4%B1%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.1.</span> <span class="nav-text"> 缓存缺失类型：</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -278,7 +282,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="2-处理器体系结构"><a href="#2-处理器体系结构" class="headerlink" title="2. 处理器体系结构"></a>2. 处理器体系结构</h1><p>LC-2200：</p>
+        <h1 id="2-处理器体系结构"><a class="markdownIt-Anchor" href="#2-处理器体系结构"></a> 2. 处理器体系结构</h1>
+<p>LC-2200：</p>
 <ol>
 <li>8 条指令 。一条指令只完成一个操作（add, nand, addi, lw, sw, beq, jalr, halt）</li>
 <li>指令长度固定 。 32 位</li>
@@ -291,7 +296,8 @@
 <li>立即数寻址</li>
 <li>内存寻址：基址+偏移量</li>
 <li>if-then-else寻址：PC+偏移量</li>
-<li>switch寻址：<ol>
+<li>switch寻址：
+<ol>
 <li>有限、稀疏：用多个if-then-else</li>
 <li>连续、不稀疏：跳转表</li>
 </ol>
@@ -299,7 +305,7 @@
 </ol>
 <p>编译一个过程调用的步骤：</p>
 <ol>
-<li>保证<strong>调用者的状态（寄存器）</strong>被保护好以便从过程调用中返回时得以恢复</li>
+<li>保证**调用者的状态（寄存器）**被保护好以便从过程调用中返回时得以恢复</li>
 <li>将<strong>实际参数</strong>传递给调用者：寄存器（少量参数）+内存栈（多余参数）</li>
 <li>记住<strong>返回地址</strong>：<code>JAL</code> ，保存返回地址，PC=被调用者起始地址</li>
 <li>将控制权交给被调用者</li>
@@ -308,17 +314,17 @@
 <li>返回调用点：<code>JAL</code> ，PC=返回地址</li>
 </ol>
 <p>保存策略：谁使用公共寄存器，谁负责保存和恢复</p>
-<p><img src="ICS笔记.assets/image-20210510223703619.png" alt="image-20210510223703619" style="zoom: 50%;" /></p>
+<img src="ICS笔记.assets/image-20210510223703619.png" alt="image-20210510223703619" style="zoom: 50%;" />
 <p>栈的状态：</p>
 <ol>
 <li>调用者保存<strong>t0~t2</strong>（临时）</li>
 <li>调用者在a0~a2放置参数，保存<strong>额外参数</strong></li>
 <li>调用者保存<strong>额外返回值</strong></li>
-<li>调用者保存<strong>$ra</strong>（上层返回地址）</li>
+<li>调用者保存**$ra**（上层返回地址）</li>
 <li>调用（$ra记录返回地址，PC跳转）</li>
-<li>被调用者保存<strong><em>$fp</em></strong>（上层帧指针），并将$sp赋值给$fp</li>
-<li>被调用者保存<strong><em>s0~s2</em></strong>（调用者的寄存器）</li>
-<li>被调用者给<strong><em>局部变量</em></strong>分配栈空间</li>
+<li>被调用者保存***$fp***（上层帧指针），并将$sp赋值给$fp</li>
+<li>被调用者保存***s0~s2***（调用者的寄存器）</li>
+<li>被调用者给***局部变量***分配栈空间</li>
 <li>返回（PC跳转）</li>
 <li>调用者恢复$ra</li>
 <li>调用者根据需要恢复额外返回值</li>
@@ -326,44 +332,52 @@
 <li>调用者恢复t0~t2</li>
 </ol>
 <p>变长指令：不浪费空间，没有操作数位数限制，指令集设计更灵活；实现更加复杂</p>
-<h1 id="3-处理器实现"><a href="#3-处理器实现" class="headerlink" title="3. 处理器实现"></a>3. 处理器实现</h1><p>宏状态：FETCH, DECODE, EXECUTE</p>
+<h1 id="3-处理器实现"><a class="markdownIt-Anchor" href="#3-处理器实现"></a> 3. 处理器实现</h1>
+<p>宏状态：FETCH, DECODE, EXECUTE</p>
 <p>微状态：ifetch1, ifetch2, …</p>
 <ol>
-<li>FETCH<ol>
-<li>ifetch1: $PC \to MAR, PC\to A$</li>
-<li>ifetch2: $MEM[MAR]\to IR$</li>
-<li>ifetch3: $A+1\to PC$</li>
+<li>FETCH
+<ol>
+<li>ifetch1: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>C</mi><mo>→</mo><mi>M</mi><mi>A</mi><mi>R</mi><mo separator="true">,</mo><mi>P</mi><mi>C</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">PC \to MAR, PC\to A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></li>
+<li>ifetch2: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mi>E</mi><mi>M</mi><mo stretchy="false">[</mo><mi>M</mi><mi>A</mi><mi>R</mi><mo stretchy="false">]</mo><mo>→</mo><mi>I</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">MEM[MAR]\to IR</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span></span></span></span></li>
+<li>ifetch3: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>+</mo><mn>1</mn><mo>→</mo><mi>P</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">A+1\to PC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></li>
 </ol>
 </li>
-<li>DECODE<ol>
-<li>beq1: $Ry\to A$</li>
-<li>beq2: $Rz\to B$</li>
-<li>beq3: $A-B\to Z$</li>
-<li>beq4: $PC+1\to A$</li>
-<li>beq5: $Ext(offset)\to B$</li>
-<li>beq6: $A+B\to PC$</li>
+<li>DECODE
+<ol>
+<li>beq1: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>y</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">Ry\to A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></li>
+<li>beq2: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>z</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">Rz\to B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></li>
+<li>beq3: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>−</mo><mi>B</mi><mo>→</mo><mi>Z</mi></mrow><annotation encoding="application/x-tex">A-B\to Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">Z</span></span></span></span></li>
+<li>beq4: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>C</mi><mo>+</mo><mn>1</mn><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">PC+1\to A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></li>
+<li>beq5: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>E</mi><mi>x</mi><mi>t</mi><mo stretchy="false">(</mo><mi>o</mi><mi>f</mi><mi>f</mi><mi>s</mi><mi>e</mi><mi>t</mi><mo stretchy="false">)</mo><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">Ext(offset)\to B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></li>
+<li>beq6: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mo>→</mo><mi>P</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">A+B\to PC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></li>
 </ol>
 </li>
 <li>EXECUTE</li>
 </ol>
-<p><img src="ICS笔记.assets/image-20210510233354777.png" alt="image-20210510233354777" style="zoom:80%;" /></p>
-<h2 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h2><p>串行：成本低，节省布线空间，适合长距离传输，工作频率高；需串-并行转换</p>
+<img src="ICS笔记.assets/image-20210510233354777.png" alt="image-20210510233354777" style="zoom:80%;" />
+<h2 id="总线"><a class="markdownIt-Anchor" href="#总线"></a> 总线</h2>
+<p>串行：成本低，节省布线空间，适合长距离传输，工作频率高；需串-并行转换</p>
 <p>并行：时序逻辑简单；远距离成本高，占用更多空间，无法持续提高工作频率（信号线间干扰）</p>
 <p>单总线：结构简单，成本低，易于接入新设备；多个部件争用，带宽低，负载重，不支持并发传送</p>
 <p>双总线：提高系统吞吐量，支持突发传送；需增加通道硬件设备、额外的管理</p>
 <p>三总线：提高高速外设访问速度；任一时刻只能使用一种总线，系统工作效率较低</p>
 <p>四总线：桥</p>
 <p>总线仲裁：多个主设备竞争</p>
-<h1 id="4-中断、陷入及异常"><a href="#4-中断、陷入及异常" class="headerlink" title="4. 中断、陷入及异常"></a>4. 中断、陷入及异常</h1><p>程序不连续性：</p>
+<h1 id="4-中断-陷入及异常"><a class="markdownIt-Anchor" href="#4-中断-陷入及异常"></a> 4. 中断、陷入及异常</h1>
+<p>程序不连续性：</p>
 <ul>
-<li><p>中断：外部<strong>设备</strong>引起的不连续性</p>
+<li>
+<p>中断：外部<strong>设备</strong>引起的不连续性</p>
 </li>
-<li><p>陷入：当前程序无法处理，只能由<strong>OS</strong>处理</p>
+<li>
+<p>陷入：当前程序无法处理，只能由<strong>OS</strong>处理</p>
 </li>
-<li><p>异常：脱离程序正常执行轨迹，由当前<strong>程序</strong>处理</p>
+<li>
+<p>异常：脱离程序正常执行轨迹，由当前<strong>程序</strong>处理</p>
 </li>
 </ul>
-<p><img src="ICS笔记.assets/image-20210510235915607.png" alt="image-20210510235915607" style="zoom:67%;" /></p>
+<img src="ICS笔记.assets/image-20210510235915607.png" alt="image-20210510235915607" style="zoom:67%;" />
 <p>体系结构与操作系统的合作：</p>
 <ol>
 <li>CPU 定义中断、异常及其编号向量值</li>
@@ -373,7 +387,7 @@
 <li>在普通程序执行时，硬件检测外部中断 ，接收<strong>中断设备</strong>的向量值</li>
 <li>硬件使用向量值索引中断向量表 ，将控制权交给处理过程</li>
 </ol>
-<p><img src="ICS笔记.assets/image-20210511002105773.png" alt="image-20210511002105773" style="zoom:50%;" /></p>
+<img src="ICS笔记.assets/image-20210511002105773.png" alt="image-20210511002105773" style="zoom:50%;" />
 <ol>
 <li>保存 $k0</li>
 <li>打开中断</li>
@@ -382,7 +396,8 @@
 <li>恢复寄存器</li>
 <li>关闭中断</li>
 <li>恢复 $k0</li>
-<li>返回原始程序<ol>
+<li>返回原始程序
+<ol>
 <li>原子操作：PC &lt;- $k0 ，打开中断</li>
 </ol>
 </li>
@@ -396,22 +411,26 @@
 <li>处理器收到中断向量后，在 中断向量表 中查出处理过程的地址</li>
 <li>将 PC 保存到 $k0 ，并将中断向量表中取出的值填入 PC</li>
 </ol>
-<h1 id="5-处理器性能与流水线处理器的设计"><a href="#5-处理器性能与流水线处理器的设计" class="headerlink" title="5. 处理器性能与流水线处理器的设计"></a>5. 处理器性能与流水线处理器的设计</h1><p>SPEC基准测试</p>
-<p>$SPEC_{ratio}=\frac{参考机器执行时间}{目标机器执行时间}$</p>
+<h1 id="5-处理器性能与流水线处理器的设计"><a class="markdownIt-Anchor" href="#5-处理器性能与流水线处理器的设计"></a> 5. 处理器性能与流水线处理器的设计</h1>
+<p>SPEC基准测试</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>P</mi><mi>E</mi><msub><mi>C</mi><mrow><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">参</mi><mi mathvariant="normal">考</mi><mi mathvariant="normal">机</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">执</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi></mrow><mrow><mi mathvariant="normal">目</mi><mi mathvariant="normal">标</mi><mi mathvariant="normal">机</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">执</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">间</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">SPEC_{ratio}=\frac{参考机器执行时间}{目标机器执行时间}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">i</span><span class="mord mathdefault mtight">o</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.739em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.394em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">目</span><span class="mord cjk_fallback mtight">标</span><span class="mord cjk_fallback mtight">机</span><span class="mord cjk_fallback mtight">器</span><span class="mord cjk_fallback mtight">执</span><span class="mord cjk_fallback mtight">行</span><span class="mord cjk_fallback mtight">时</span><span class="mord cjk_fallback mtight">间</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">参</span><span class="mord cjk_fallback mtight">考</span><span class="mord cjk_fallback mtight">机</span><span class="mord cjk_fallback mtight">器</span><span class="mord cjk_fallback mtight">执</span><span class="mord cjk_fallback mtight">行</span><span class="mord cjk_fallback mtight">时</span><span class="mord cjk_fallback mtight">间</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>响应时间（墙上时间）：计算机完成某任务的总时间</p>
 <p>吞吐率（带宽）：单位时间内完成的任务数量</p>
 <p>存储器容量：所有存储单元的总数目</p>
 <p>基本原则：大概率事件优先，Amdahl定律（加快某部件执行速度所获得的系统性能加速比受限于该部件在系统中所占的<strong>重要性比例</strong>）</p>
 <p>波特率：全算</p>
 <p>比特率：只算有效信息</p>
-<h1 id="7-内存管理技术"><a href="#7-内存管理技术" class="headerlink" title="7. 内存管理技术"></a>7. 内存管理技术</h1><p>基址+限长寄存器：方便进行动态重定位</p>
+<h1 id="7-内存管理技术"><a class="markdownIt-Anchor" href="#7-内存管理技术"></a> 7. 内存管理技术</h1>
+<p>基址+限长寄存器：方便进行动态重定位</p>
 <p>固定尺寸分区：有内部、外部碎片</p>
-<p>​    分配表以固定尺寸分区为基础维护着总结信息</p>
+<p>​	分配表以固定尺寸分区为基础维护着总结信息</p>
 <p>变长分区：有外部碎片，可以缩并</p>
 <p>分页：可能有内部碎片</p>
-<p><img src="ICS笔记.assets/image-20210511085247899.png" alt="image-20210511085247899" style="zoom:50%;" /></p>
+<img src="ICS笔记.assets/image-20210511085247899.png" alt="image-20210511085247899" style="zoom:50%;" />
 <p>分段：每段地址都从0开始，可能有外部碎片</p>
-<h1 id="9-分级存储体系"><a href="#9-分级存储体系" class="headerlink" title="9. 分级存储体系"></a>9. 分级存储体系</h1><h2 id="缓存缺失类型："><a href="#缓存缺失类型：" class="headerlink" title="缓存缺失类型："></a>缓存缺失类型：</h2><ol>
+<h1 id="9-分级存储体系"><a class="markdownIt-Anchor" href="#9-分级存储体系"></a> 9. 分级存储体系</h1>
+<h2 id="缓存缺失类型"><a class="markdownIt-Anchor" href="#缓存缺失类型"></a> 缓存缺失类型：</h2>
+<ol>
 <li>冷/强制缺失：第一次访问给定内存单元</li>
 <li>容量缺失：缓存是满的</li>
 <li>冲突缺失：缓存不满，但映射策略会引入被其他元素占用的缓存行</li>
