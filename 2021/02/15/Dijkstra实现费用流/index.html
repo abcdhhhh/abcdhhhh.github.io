@@ -279,19 +279,17 @@
     
     <div class="post-body" itemprop="articleBody">
         <ol>
-<li>
-<p>用SPFA求出源点到每个点的最短距离</p>
+<li><p>用SPFA求出源点到每个点的最短距离</p>
 </li>
-<li>
-<p>为每个点 i 赋点权 h[i]为dis[i] ,并视每条连接 u,v 的边 i 的边权 w’[i] 为 w[i]+h[u]-h[v] 。</p>
-<p>由于对于任意两点 u,v ,有<strong>w[u][v]+h[u]-h[v]≥0</strong> ,所以 w’ [i]≥0 ,这样一来新图上的 dis’[i] 就等于** dis[i]+h[S]-h[i]**。</p>
+<li><p>为每个点 i 赋点权 h[i]为dis[i] ,并视每条连接 u,v 的边 i 的边权 w’[i] 为 w[i]+h[u]-h[v] 。</p>
+<p>由于对于任意两点 u,v ,有<strong>w[u][v]+h[u]-h[v]≥0</strong> ,所以 w’ [i]≥0 ,这样一来新图上的 dis’[i] 就等于<strong> dis[i]+h[S]-h[i]</strong>。</p>
 <p>由于每次跑最短路时 h[i] 都是不变的,所以求出了 dis’[i] 也就求出了 dis[i] ( dis[i]=dis’[i]-h[S]+h[i] ,其实很显然 h[S]=0 )</p>
 </li>
 </ol>
 <pre class="mermaid">graph LR;
-	u((u))
-	v((v))
-	u--"w[u][v]+h[u]-h[v]"-->v</pre>
+    u((u))
+    v((v))
+    u--"w[u][v]+h[u]-h[v]"-->v</pre>
 
     </div>
 
