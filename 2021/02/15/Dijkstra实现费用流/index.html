@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"abcdhhhh.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta name="description" content="我非要用Dijkstra">
 <meta property="og:type" content="article">
@@ -180,6 +180,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/abcdhhhh" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;abcdhhhh" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:stockyflush@gmail.com" title="E-Mail → mailto:stockyflush@gmail.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
@@ -268,6 +276,22 @@
       <span class="post-meta-item-text">Views: </span>
       <span class="leancloud-visitors-count"></span>
     </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>278</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
 </div>
 
             <div class="post-description">我非要用Dijkstra</div>
@@ -279,19 +303,17 @@
     
     <div class="post-body" itemprop="articleBody">
         <ol>
-<li>
-<p>用SPFA求出源点到每个点的最短距离</p>
+<li><p>用SPFA求出源点到每个点的最短距离</p>
 </li>
-<li>
-<p>为每个点 i 赋点权 h[i]为dis[i] ,并视每条连接 u,v 的边 i 的边权 w’[i] 为 w[i]+h[u]-h[v] 。</p>
-<p>由于对于任意两点 u,v ,有<strong>w[u][v]+h[u]-h[v]≥0</strong> ,所以 w’ [i]≥0 ,这样一来新图上的 dis’[i] 就等于** dis[i]+h[S]-h[i]**。</p>
+<li><p>为每个点 i 赋点权 h[i]为dis[i] ,并视每条连接 u,v 的边 i 的边权 w’[i] 为 w[i]+h[u]-h[v] 。</p>
+<p>由于对于任意两点 u,v ,有<strong>w[u][v]+h[u]-h[v]≥0</strong> ,所以 w’ [i]≥0 ,这样一来新图上的 dis’[i] 就等于<strong> dis[i]+h[S]-h[i]</strong>。</p>
 <p>由于每次跑最短路时 h[i] 都是不变的,所以求出了 dis’[i] 也就求出了 dis[i] ( dis[i]=dis’[i]-h[S]+h[i] ,其实很显然 h[S]=0 )</p>
 </li>
 </ol>
 <pre class="mermaid">graph LR;
-	u((u))
-	v((v))
-	u--"w[u][v]+h[u]-h[v]"-->v</pre>
+    u((u))
+    v((v))
+    u--"w[u][v]+h[u]-h[v]"-->v</pre>
 
     </div>
 
@@ -386,6 +408,22 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">abcdhhhh</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>Symbols count total: </span>
+    <span title="Symbols count total">27k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>Reading time total &asymp;</span>
+    <span title="Reading time total">25 mins.</span>
+  </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
