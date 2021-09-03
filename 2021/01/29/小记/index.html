@@ -278,10 +278,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>没啥特别的目的，主要想体验一下建站是一种什么感觉<del>以及不喜欢CSDN的界面风格</del>。<br>关于写啥内容，暂时还没啥明确的想法。希望能早日写出一些有价值的东西吧。</p>
+        <p>没啥特别的目的，主要想体验一下建站是一种什么感觉<del>以及不喜欢CSDN的界面风格</del>。<br />
+关于写啥内容，暂时还没啥明确的想法。希望能早日写出一些有价值的东西吧。</p>
 <p>没有太多可说的，那就放一首歌吧。</p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1389794615&auto=1&height=66"></iframe>
-
 
     </div>
 
@@ -333,6 +333,7 @@
 
 
 
+    <div class="comments utterances-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -521,6 +522,19 @@ if (document.querySelectorAll('.mermaid').length) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.min.css">
 
 
+
+<script>
+NexT.utils.loadComments('.utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "abcdhhhh/blog-comments");
+  script.setAttribute('issue-term', "http://github.com/abcdhhhh/blog-comments");
+  script.setAttribute('theme', "github-light");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('.utterances-container').appendChild(script);
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
